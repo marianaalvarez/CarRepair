@@ -13,6 +13,11 @@
 		C4392945231DBC6700B9AFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4392944231DBC6700B9AFF9 /* Assets.xcassets */; };
 		C4392948231DBC6700B9AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */; };
 		C4392953231DBC6700B9AFF9 /* CarRepairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */; };
+		C439296B231F006B00B9AFF9 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296A231F006B00B9AFF9 /* CarRepair.swift */; };
+		C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296C231F0B4700B9AFF9 /* Photo.swift */; };
+		C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */; };
+		C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392970231F0F9300B9AFF9 /* CarRepairDetail.swift */; };
+		C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392972231F108700B9AFF9 /* CarRepairDetailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		C439294E231DBC6700B9AFF9 /* CarRepairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRepairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairTests.swift; sourceTree = "<group>"; };
 		C4392954231DBC6700B9AFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C439296A231F006B00B9AFF9 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
+		C439296C231F0B4700B9AFF9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairResponse.swift; sourceTree = "<group>"; };
+		C4392970231F0F9300B9AFF9 /* CarRepairDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetail.swift; sourceTree = "<group>"; };
+		C4392972231F108700B9AFF9 /* CarRepairDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,7 @@
 		C439293C231DBC6600B9AFF9 /* CarRepair */ = {
 			isa = PBXGroup;
 			children = (
+				C439295D231EFE5900B9AFF9 /* Features */,
 				C439293D231DBC6600B9AFF9 /* AppDelegate.swift */,
 				C439293F231DBC6600B9AFF9 /* ViewController.swift */,
 				C4392941231DBC6600B9AFF9 /* Main.storyboard */,
@@ -94,6 +105,90 @@
 				C4392954231DBC6700B9AFF9 /* Info.plist */,
 			);
 			path = CarRepairTests;
+			sourceTree = "<group>";
+		};
+		C439295D231EFE5900B9AFF9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C4392969231EFFAA00B9AFF9 /* Model */,
+				C439295E231EFE7700B9AFF9 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C439295E231EFE7700B9AFF9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C4392962231EFEB500B9AFF9 /* Controller */,
+				C4392961231EFEAE00B9AFF9 /* DataProvider */,
+				C4392965231EFEE800B9AFF9 /* Factory */,
+				C4392964231EFEDD00B9AFF9 /* Presenter */,
+				C4392963231EFECE00B9AFF9 /* UseCase */,
+				C4392960231EFEA600B9AFF9 /* View */,
+				C439295F231EFE9F00B9AFF9 /* ViewModel */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C439295F231EFE9F00B9AFF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4392960231EFEA600B9AFF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4392961231EFEAE00B9AFF9 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		C4392962231EFEB500B9AFF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4392963231EFECE00B9AFF9 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C4392964231EFEDD00B9AFF9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C4392965231EFEE800B9AFF9 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		C4392969231EFFAA00B9AFF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C439296A231F006B00B9AFF9 /* CarRepair.swift */,
+				C439296C231F0B4700B9AFF9 /* Photo.swift */,
+				C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */,
+				C4392970231F0F9300B9AFF9 /* CarRepairDetail.swift */,
+				C4392972231F108700B9AFF9 /* CarRepairDetailResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +292,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */,
+				C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */,
+				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C4392940231DBC6600B9AFF9 /* ViewController.swift in Sources */,
 				C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */,
+				C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */,
+				C439296B231F006B00B9AFF9 /* CarRepair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
