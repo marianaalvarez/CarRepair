@@ -1,0 +1,112 @@
+//
+//  Router.swift
+//  CarRepair
+//
+//  Created by mariana.alvarez on 9/3/19.
+//  Copyright © 2019 mariana.alvarez. All rights reserved.
+//
+
+import Foundation
+
+class Router<EndPoint: EndPointType>: NetworkRouter {
+    private var task: URLSessionTask?
+
+    func request<T>(route: EndPoint, callback: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
+        let session = URLSession.shared
+        do {
+            let request = try self.buildRequest(from: route)
+            task = session.dataTask(with: request, completionHandler: { data, response, error in
+                if error != nil {
+                    callback(.failure(NetworkResponse.internetConnection.rawValue))
+                }
+
+                if let response = response as? HTTPURLResponse {
+                    let result = self.handleNetworkResponse(response)
+
+                    switch result {
+                    case .success:
+                        guard let responseData = data else {
+                            callback(.failure(NetworkResponse.noData.rawValue))
+                            return
+                        }
+                        do {
+                            let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
+                            callback(.success(apiResponse))
+                        } catch {
+                            callback(.failure(NetworkResponse.unableToDecode.rawValue))
+                        }
+                    case .failure(let message):
+                        callback(.failure(message))
+                    }
+                }
+            })
+        } catch {
+            callback(.failure(NetworkResponse.internetConnection.rawValue))
+        }
+        self.task?.resume()
+    }
+
+    func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
+        let session = URLSession.shared
+        do {
+            let request = try self.buildRequest(from: route)
+            task = session.dataTask(with: request, completionHandler: { data, response, error in
+                completion(data, response, error)
+            })
+        } catch {
+            completion(nil, nil, error)
+        }
+        self.task?.resume()
+    }
+
+    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+        var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),
+                                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                 timeoutInterval: 10)
+
+        request.httpMethod = route.httpMethod.rawValue
+
+        do {
+            switch route.task {
+            case .requestParameters(let urlParameters, _):
+                try configureParameters(urlParameters: urlParameters, request: &request)
+            }
+            return request
+        }
+        catch {
+            throw error
+        }
+
+    }
+
+    fileprivate func configureParameters(urlParameters: Parameters?, request: inout URLRequest) throws {
+        do {
+            if let urlParameters = urlParameters {
+                try URLParameterEncoder.encode(urlRequest: &request, with: urlParameters)
+            }
+        } catch {
+            throw error
+        }
+    }
+
+    fileprivate func addAditionalHeaders(_ additionalHeaders: HTTPHeaders?, request: inout URLRequest) {
+        guard let headers = additionalHeaders else { return }
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+    }
+
+    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Void> {
+        switch response.statusCode {
+        case 200:
+            return .success(())
+        case StatusCodeError.internalServerError.rawValue:
+            return .failure("Erro interno no servidor")
+        case StatusCodeError.timeout.rawValue:
+            return .failure("Timeout")
+        default:
+            return .failure("Ocorreu um erro. Tente novammente mais tarde.")
+        }
+    }
+
+}

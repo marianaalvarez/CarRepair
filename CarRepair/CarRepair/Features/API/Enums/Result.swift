@@ -6,7 +6,7 @@
 //  Copyright © 2019 mariana.alvarez. All rights reserved.
 //
 
-enum Result<T: Codable>{
+enum Result<T>{
     case success(T)
     case failure(String)
 }

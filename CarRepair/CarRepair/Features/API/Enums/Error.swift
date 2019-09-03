@@ -22,4 +22,18 @@ enum NetworkError: String, Error {
     case missingURL = "URL is nil."
 }
 
+enum NetworkResponse: String {
+    case internetConnection = "Please, check your internet connection"
+    case badRequest = "Bad request"
+    case noData = "Response returned with no data to decode"
+    case unableToDecode = "Response could not be decoded"
+}
+
+enum StatusCodeError: Int, Error {
+    case timeout = 408
+    case internalServerError = 500
+}
+
+
+
 
