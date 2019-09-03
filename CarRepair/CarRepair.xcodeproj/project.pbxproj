@@ -25,6 +25,8 @@
 		C4392981231F19AF00B9AFF9 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392980231F19AF00B9AFF9 /* HTTPTask.swift */; };
 		C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */; };
 		C4392986231F1BDF00B9AFF9 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */; };
+		C439298B231F1D0D00B9AFF9 /* CarRepairService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439298A231F1D0D00B9AFF9 /* CarRepairService.swift */; };
+		C439298D231F1F2100B9AFF9 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439298C231F1F2100B9AFF9 /* JSONParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		C4392980231F19AF00B9AFF9 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		C439298A231F1D0D00B9AFF9 /* CarRepairService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairService.swift; sourceTree = "<group>"; };
+		C439298C231F1F2100B9AFF9 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 		C4392974231F171B00B9AFF9 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				C4392989231F1CEC00B9AFF9 /* Services */,
 				C4392982231F1B5100B9AFF9 /* Encoding */,
 				C4392977231F185800B9AFF9 /* Enums */,
 			);
@@ -232,8 +237,17 @@
 			children = (
 				C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */,
 				C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */,
+				C439298C231F1F2100B9AFF9 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
+			sourceTree = "<group>";
+		};
+		C4392989231F1CEC00B9AFF9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C439298A231F1D0D00B9AFF9 /* CarRepairService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C439298D231F1F2100B9AFF9 /* JSONParameterEncoder.swift in Sources */,
 				C4392981231F19AF00B9AFF9 /* HTTPTask.swift in Sources */,
 				C439297B231F189C00B9AFF9 /* Result.swift in Sources */,
 				C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */,
 				C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */,
 				C4392986231F1BDF00B9AFF9 /* URLParameterEncoder.swift in Sources */,
+				C439298B231F1D0D00B9AFF9 /* CarRepairService.swift in Sources */,
 				C4392979231F187100B9AFF9 /* Error.swift in Sources */,
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
