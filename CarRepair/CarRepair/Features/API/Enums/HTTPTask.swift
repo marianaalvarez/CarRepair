@@ -7,7 +7,6 @@
 //
 
 typealias HTTPHeaders = [String: String]
-typealias Parameters = [String: Any]
 
 enum HTTPTask {
     case requestParameters(urlParameters: Parameters?, headers: HTTPHeaders?)

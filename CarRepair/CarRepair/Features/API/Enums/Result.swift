@@ -7,6 +7,6 @@
 //
 
 enum Result<T: Codable>{
-    case seuccess(T)
+    case success(T)
     case failure(String)
 }

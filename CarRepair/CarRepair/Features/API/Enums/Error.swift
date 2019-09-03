@@ -16,3 +16,10 @@ enum APIResponse: String {
     case notFound = "NOT_FOUND"
 }
 
+enum NetworkError: String, Error {
+    case parametersNil = "Parameters are nil."
+    case encodingFailed = "Parameters enconding failed."
+    case missingURL = "URL is nil."
+}
+
+

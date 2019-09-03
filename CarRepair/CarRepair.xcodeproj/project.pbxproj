@@ -18,11 +18,13 @@
 		C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */; };
 		C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392970231F0F9300B9AFF9 /* CarRepairDetail.swift */; };
 		C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392972231F108700B9AFF9 /* CarRepairDetailResponse.swift */; };
-		C4392979231F187100B9AFF9 /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392978231F187100B9AFF9 /* StatusResponse.swift */; };
+		C4392979231F187100B9AFF9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392978231F187100B9AFF9 /* Error.swift */; };
 		C439297B231F189C00B9AFF9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439297A231F189C00B9AFF9 /* Result.swift */; };
 		C439297D231F18E000B9AFF9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439297C231F18E000B9AFF9 /* HTTPMethod.swift */; };
 		C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439297E231F197C00B9AFF9 /* EndPointType.swift */; };
 		C4392981231F19AF00B9AFF9 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392980231F19AF00B9AFF9 /* HTTPTask.swift */; };
+		C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */; };
+		C4392986231F1BDF00B9AFF9 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +53,13 @@
 		C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairResponse.swift; sourceTree = "<group>"; };
 		C4392970231F0F9300B9AFF9 /* CarRepairDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetail.swift; sourceTree = "<group>"; };
 		C4392972231F108700B9AFF9 /* CarRepairDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailResponse.swift; sourceTree = "<group>"; };
-		C4392978231F187100B9AFF9 /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
+		C4392978231F187100B9AFF9 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		C439297A231F189C00B9AFF9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C439297C231F18E000B9AFF9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		C439297E231F197C00B9AFF9 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		C4392980231F19AF00B9AFF9 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 		C4392974231F171B00B9AFF9 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				C4392982231F1B5100B9AFF9 /* Encoding */,
 				C4392977231F185800B9AFF9 /* Enums */,
 			);
 			path = API;
@@ -213,13 +218,22 @@
 		C4392977231F185800B9AFF9 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				C4392978231F187100B9AFF9 /* StatusResponse.swift */,
+				C4392978231F187100B9AFF9 /* Error.swift */,
 				C439297A231F189C00B9AFF9 /* Result.swift */,
 				C439297C231F18E000B9AFF9 /* HTTPMethod.swift */,
 				C439297E231F197C00B9AFF9 /* EndPointType.swift */,
 				C4392980231F19AF00B9AFF9 /* HTTPTask.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		C4392982231F1B5100B9AFF9 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				C4392983231F1B6800B9AFF9 /* ParameterEncoding.swift */,
+				C4392985231F1BDF00B9AFF9 /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +341,11 @@
 				C439297B231F189C00B9AFF9 /* Result.swift in Sources */,
 				C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */,
 				C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */,
-				C4392979231F187100B9AFF9 /* StatusResponse.swift in Sources */,
+				C4392986231F1BDF00B9AFF9 /* URLParameterEncoder.swift in Sources */,
+				C4392979231F187100B9AFF9 /* Error.swift in Sources */,
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
+				C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */,
 				C4392940231DBC6600B9AFF9 /* ViewController.swift in Sources */,
 				C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */,
 				C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */,
