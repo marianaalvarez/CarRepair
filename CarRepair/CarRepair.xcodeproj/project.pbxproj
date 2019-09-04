@@ -39,6 +39,7 @@
 		C43929A6231F6DC300B9AFF9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A5231F6DC300B9AFF9 /* UIColor.swift */; };
 		C43929A8231F711200B9AFF9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */; };
 		C43929AB231F76AB00B9AFF9 /* CarRepairViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */; };
+		C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C43929A5231F6DC300B9AFF9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewCell.swift; sourceTree = "<group>"; };
+		C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairTableViewDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		C4392961231EFEAE00B9AFF9 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				C439299F231F666E00B9AFF9 /* GetCarRepairListPresenter.swift in Sources */,
 				C43929A3231F6C1900B9AFF9 /* CarRepairView.swift in Sources */,
 				C4392996231F23C300B9AFF9 /* CarRepairAPI.swift in Sources */,
+				C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */,
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
 				C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */,
