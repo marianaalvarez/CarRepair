@@ -14,7 +14,8 @@ struct CarRepairReponse: Codable {
     let nextPageToken: String
 
     enum CodingKeys: String, CodingKey {
-        case status, nextPageToken
+        case status
+        case nextPageToken = "next_page_token"
         case carRepairList = "results"
     }
 }

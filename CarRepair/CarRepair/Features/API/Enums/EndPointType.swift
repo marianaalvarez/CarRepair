@@ -14,4 +14,5 @@ protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: [String: Any]? { get }
+    var parameters: [String: Any] { get }
 }

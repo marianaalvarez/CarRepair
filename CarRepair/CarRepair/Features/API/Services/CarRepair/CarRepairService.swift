@@ -15,7 +15,7 @@ enum CarRepairService {
 extension CarRepairService: EndPointType {
 
     var environmentBaseURL: String {
-        return "https://maps.googleapis.com/maps/api/place"
+        return "https://maps.googleapis.com/maps/api/place/"
     }
 
     var baseURL: URL {
@@ -28,7 +28,7 @@ extension CarRepairService: EndPointType {
     var path: String {
         switch self {
         case .getCarRepairList:
-            return "/nearbysearch"
+            return "nearbysearch/json"
         }
     }
 
@@ -39,12 +39,22 @@ extension CarRepairService: EndPointType {
     var task: HTTPTask {
         switch self {
         case .getCarRepairList:
-            return .requestParameters(urlParameters: nil, headers: nil)
+            return .requestParameters(urlParameters: parameters, headers: nil)
         }
     }
 
     var headers: [String : Any]? {
         return nil
     }
-}
 
+    public var parameters: [String : Any] {
+        switch self {
+        case .getCarRepairList:
+            return [
+                "location": "-23.556796,-46.649749",
+                "radius": 5000,
+                "type": "car_repair"
+            ]
+        }
+    }
+}

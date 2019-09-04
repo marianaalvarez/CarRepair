@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CarRepairAPIProtocol {
-    func getCarRepairList(callback: @escaping (Result<[CarRepair]>) -> Void)
+    func getCarRepairList(callback: @escaping (Result<CarRepairReponse>) -> Void)
 }
 
 final class CarRepairAPI: CarRepairAPIProtocol {
@@ -19,7 +19,7 @@ final class CarRepairAPI: CarRepairAPIProtocol {
         self.service = service
     }
 
-    func getCarRepairList(callback: @escaping (Result<[CarRepair]>) -> Void) {
+    func getCarRepairList(callback: @escaping (Result<CarRepairReponse>) -> Void) {
         service.request(route: .getCarRepairList, callback: callback)
     }
 }
