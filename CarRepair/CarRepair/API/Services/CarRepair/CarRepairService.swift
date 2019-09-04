@@ -14,12 +14,8 @@ enum CarRepairService {
 
 extension CarRepairService: EndPointType {
 
-    var environmentBaseURL: String {
-        return "https://maps.googleapis.com/maps/api/place/"
-    }
-
     var baseURL: URL {
-        guard let url = URL(string: environmentBaseURL) else {
+        guard let url = URL(string: Environment.baseURL) else {
             fatalError("Could not found base URL")
         }
         return url

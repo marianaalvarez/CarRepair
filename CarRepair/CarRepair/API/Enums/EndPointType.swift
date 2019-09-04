@@ -16,3 +16,12 @@ protocol EndPointType {
     var headers: [String: Any]? { get }
     var parameters: [String: Any] { get }
 }
+
+extension EndPointType {
+    var baseURL: URL {
+        guard let url = URL(string: Environment.baseURL) else {
+            fatalError("Could not found base URL")
+        }
+        return url
+    }
+}

@@ -20,6 +20,10 @@ final class CarRepairAPI: CarRepairAPIProtocol {
     }
 
     func getCarRepairList(callback: @escaping (Result<CarRepairReponse>) -> Void) {
-        service.request(route: .getCarRepairList, callback: callback)
+        service.request(route: .getCarRepairList) { result in
+                DispatchQueue.main.async {
+                    callback(result)
+                }
+            }
     }
 }
