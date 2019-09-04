@@ -34,6 +34,7 @@
 		C439299B231F662300B9AFF9 /* GetCarRepairListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439299A231F662300B9AFF9 /* GetCarRepairListUseCase.swift */; };
 		C439299D231F664100B9AFF9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439299C231F664100B9AFF9 /* Interactor.swift */; };
 		C439299F231F666E00B9AFF9 /* GetCarRepairListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439299E231F666E00B9AFF9 /* GetCarRepairListPresenter.swift */; };
+		C43929A1231F68EE00B9AFF9 /* CarRepairViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A0231F68EE00B9AFF9 /* CarRepairViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C439299A231F662300B9AFF9 /* GetCarRepairListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairListUseCase.swift; sourceTree = "<group>"; };
 		C439299C231F664100B9AFF9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		C439299E231F666E00B9AFF9 /* GetCarRepairListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairListPresenter.swift; sourceTree = "<group>"; };
+		C43929A0231F68EE00B9AFF9 /* CarRepairViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		C439295F231EFE9F00B9AFF9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C43929A0231F68EE00B9AFF9 /* CarRepairViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				C4392973231F108700B9AFF9 /* CarRepairDetailResponse.swift in Sources */,
 				C4392992231F1FDC00B9AFF9 /* Router.swift in Sources */,
 				C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */,
+				C43929A1231F68EE00B9AFF9 /* CarRepairViewModel.swift in Sources */,
 				C4392986231F1BDF00B9AFF9 /* URLParameterEncoder.swift in Sources */,
 				C439298B231F1D0D00B9AFF9 /* CarRepairService.swift in Sources */,
 				C4392979231F187100B9AFF9 /* Error.swift in Sources */,
