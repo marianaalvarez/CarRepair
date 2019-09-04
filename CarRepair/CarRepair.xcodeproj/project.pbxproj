@@ -38,6 +38,7 @@
 		C43929A3231F6C1900B9AFF9 /* CarRepairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A2231F6C1900B9AFF9 /* CarRepairView.swift */; };
 		C43929A6231F6DC300B9AFF9 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A5231F6DC300B9AFF9 /* UIColor.swift */; };
 		C43929A8231F711200B9AFF9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */; };
+		C43929AB231F76AB00B9AFF9 /* CarRepairViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		C43929A2231F6C1900B9AFF9 /* CarRepairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairView.swift; sourceTree = "<group>"; };
 		C43929A5231F6DC300B9AFF9 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 		C4392960231EFEA600B9AFF9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C43929A9231F768800B9AFF9 /* Cell */,
 				C43929A2231F6C1900B9AFF9 /* CarRepairView.swift */,
 			);
 			path = View;
@@ -315,6 +318,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C43929A9231F768800B9AFF9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,6 +429,7 @@
 			files = (
 				C439299B231F662300B9AFF9 /* GetCarRepairListUseCase.swift in Sources */,
 				C439298D231F1F2100B9AFF9 /* JSONParameterEncoder.swift in Sources */,
+				C43929AB231F76AB00B9AFF9 /* CarRepairViewCell.swift in Sources */,
 				C439299D231F664100B9AFF9 /* Interactor.swift in Sources */,
 				C4392981231F19AF00B9AFF9 /* HTTPTask.swift in Sources */,
 				C439297B231F189C00B9AFF9 /* Result.swift in Sources */,
