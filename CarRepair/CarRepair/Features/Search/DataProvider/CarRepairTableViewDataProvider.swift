@@ -13,6 +13,12 @@ final class CarRepairTableViewDataProvider: NSObject, UITableViewDataSource, UIT
 
     override init() {}
 
+    // MARK: Public functions
+
+    func update(carRepairList: [CarRepair]) {
+        self.carRepairList = carRepairList
+    }
+
     // MARK: UITableViewDataSource conforms
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

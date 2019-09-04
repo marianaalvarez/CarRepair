@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293D231DBC6600B9AFF9 /* AppDelegate.swift */; };
-		C4392940231DBC6600B9AFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293F231DBC6600B9AFF9 /* ViewController.swift */; };
+		C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */; };
 		C4392943231DBC6600B9AFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392941231DBC6600B9AFF9 /* Main.storyboard */; };
 		C4392945231DBC6700B9AFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4392944231DBC6700B9AFF9 /* Assets.xcassets */; };
 		C4392948231DBC6700B9AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */; };
@@ -40,6 +40,7 @@
 		C43929A8231F711200B9AFF9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */; };
 		C43929AB231F76AB00B9AFF9 /* CarRepairViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */; };
 		C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */; };
+		C485D7852320827200AB30A6 /* CarRepairViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7842320827200AB30A6 /* CarRepairViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 /* Begin PBXFileReference section */
 		C439293A231DBC6600B9AFF9 /* CarRepair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRepair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439293D231DBC6600B9AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C439293F231DBC6600B9AFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewController.swift; sourceTree = "<group>"; };
 		C4392942231DBC6600B9AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4392944231DBC6700B9AFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4392947231DBC6700B9AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewCell.swift; sourceTree = "<group>"; };
 		C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairTableViewDataProvider.swift; sourceTree = "<group>"; };
+		C485D7842320827200AB30A6 /* CarRepairViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,6 @@
 				C4392997231F632200B9AFF9 /* Shared */,
 				C439295D231EFE5900B9AFF9 /* Features */,
 				C439293D231DBC6600B9AFF9 /* AppDelegate.swift */,
-				C439293F231DBC6600B9AFF9 /* ViewController.swift */,
 				C4392941231DBC6600B9AFF9 /* Main.storyboard */,
 				C4392944231DBC6700B9AFF9 /* Assets.xcassets */,
 				C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */,
@@ -205,6 +206,7 @@
 		C4392962231EFEB500B9AFF9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 		C4392965231EFEE800B9AFF9 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				C485D7842320827200AB30A6 /* CarRepairViewControllerFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -447,13 +450,14 @@
 				C4392979231F187100B9AFF9 /* Error.swift in Sources */,
 				C4392999231F633100B9AFF9 /* Environment.swift in Sources */,
 				C439299F231F666E00B9AFF9 /* GetCarRepairListPresenter.swift in Sources */,
+				C485D7852320827200AB30A6 /* CarRepairViewControllerFactory.swift in Sources */,
 				C43929A3231F6C1900B9AFF9 /* CarRepairView.swift in Sources */,
 				C4392996231F23C300B9AFF9 /* CarRepairAPI.swift in Sources */,
 				C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */,
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
 				C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */,
-				C4392940231DBC6600B9AFF9 /* ViewController.swift in Sources */,
+				C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */,
 				C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */,
 				C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */,
 				C4392990231F1FAA00B9AFF9 /* NetworkRouter.swift in Sources */,

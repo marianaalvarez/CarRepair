@@ -15,6 +15,7 @@ final class CarRepairView: UIView {
         view.backgroundColor = .white
         view.layer.cornerRadius = 6
         view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
@@ -91,11 +92,31 @@ final class CarRepairView: UIView {
 
         setupLayout()
         setupView()
+        setupLabels()
         loadImage()
     }
 
+    // MARK: NSCoding conforms
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError()
+    }
+
+    // MARK: Private functions
+
+    private func setupView() {
+        backgroundColor = .clear
+    }
+
+    private func setupLabels() {
+        nameLabel.text = viewModel.name
+        addressLabel.text = viewModel.address
+        ratingLabel.text = viewModel.rating
+        openingHourLabel.text = viewModel.openNow
+    }
+
+    private func loadImage() {
+        
     }
 
     private func setupLayout() {
@@ -109,25 +130,25 @@ final class CarRepairView: UIView {
         ])
 
         contentView.addSubview(nameLabel, constraints: [
-            nameLabel.topAnchor.constraint(equalTo: imageVIew.topAnchor, constant: 8),
+            nameLabel.topAnchor.constraint(equalTo: imageVIew.bottomAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
 
         contentView.addSubview(addressLabel, constraints: [
-            addressLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 4),
+            addressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
             addressLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             addressLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
 
         contentView.addSubview(addressLabel, constraints: [
-            addressLabel.topAnchor.constraint(equalTo: nameLabel.topAnchor, constant: 4),
+            addressLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
             addressLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             addressLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
 
         contentView.addSubview(starIcon, constraints: [
-            starIcon.topAnchor.constraint(equalTo: addressLabel.topAnchor, constant: 4),
+            starIcon.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 4),
             starIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16)
         ])
 
@@ -140,13 +161,5 @@ final class CarRepairView: UIView {
             openingHourLabel.leadingAnchor.constraint(equalTo: ratingLabel.trailingAnchor, constant: 6),
             openingHourLabel.centerYAnchor.constraint(equalTo: starIcon.centerYAnchor)
         ])
-    }
-
-    private func setupView() {
-        backgroundColor = .clear
-    }
-
-    private func loadImage() {
-        
     }
 }

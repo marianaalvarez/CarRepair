@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().barTintColor = .blueWater
+        UINavigationBar.appearance().tintColor = .white
+
+        let viewController = CarRepairViewControllerFactory.make()
+        window = UIWindow(frame: UIScreen.main.bounds)
+
+        let navigationController = UINavigationController(rootViewController: viewController)
+
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+
         return true
     }
 }
