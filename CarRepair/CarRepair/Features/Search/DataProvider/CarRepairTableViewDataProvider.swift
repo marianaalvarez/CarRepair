@@ -8,10 +8,43 @@
 
 import UIKit
 
-final class CarRepairTableViewDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private var carRepairList = [CarRepair]()
+    private let collectionView: UICollectionView
 
-    override init() {}
+    private lazy var cellSize: CGSize = {
+        let width = collectionView.frame.width
+        return CGSize(width: width, height: 160)
+    }()
+
+    private lazy var cellEdgeInsets: UIEdgeInsets = {
+        let horizontalInset = (collectionView.frame.width - cellSize.width) * 0.5
+
+        return UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
+    }()
+
+
+    // MARK: Initializer
+
+    init(collectionView: UICollectionView) {
+        self.collectionView = collectionView
+
+        super.init()
+
+        registerCell()
+        setupDelegate()
+    }
+
+    // MARK: Private functions
+
+    private func registerCell() {
+        collectionView.register(CarRepairViewCell.self, forCellWithReuseIdentifier: CarRepairViewCell.reuseIdentifier)
+    }
+
+    private func setupDelegate() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
 
     // MARK: Public functions
 
@@ -19,31 +52,44 @@ final class CarRepairTableViewDataProvider: NSObject, UITableViewDataSource, UIT
         self.carRepairList = carRepairList
     }
 
-    // MARK: UITableViewDataSource conforms
+    // MARK: UICollectionViewDataSource conforms
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarRepairViewCell.reuseIdentifier, for: indexPath) as? CarRepairViewCell else {
+            return UICollectionViewCell()
+        }
+
+        let item = carRepairList[indexPath.row]
+        let viewModel = CarRepairViewModel(carRepair: item)
+        cell.setup(viewModel: viewModel)
+
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carRepairList.count
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    // MARK: UICollectionViewDelegateFlowLayout conforms
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: CarRepairViewCell.reuseIdentifier) as? CarRepairViewCell {
-            let item = carRepairList[indexPath.row]
-            let viewModel = CarRepairViewModel(carRepair: item)
-            cell.setup(viewModel: viewModel)
-
-            return cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout, layout.itemSize == .zero {
+            layout.itemSize = cellSize
         }
-        return UITableViewCell()
+
+        return cellSize
     }
 
-    // MARK: UITableViewDelegate conforms
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout, layout.sectionInset == .zero {
+            layout.sectionInset = cellEdgeInsets
+        }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return cellEdgeInsets
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
     }
 }
 

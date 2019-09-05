@@ -9,16 +9,14 @@
 import UIKit
 
 class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(CarRepairViewCell.self, forCellReuseIdentifier: CarRepairViewCell.reuseIdentifier)
-        tableView.backgroundColor = .white
-        tableView.bounces = false
-        tableView.allowsSelection = false
-        tableView.accessibilityIdentifier = "car_repair_table_view"
+    private let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        collectionView.bounces = false
+        collectionView.accessibilityIdentifier = "car_repair_table_view"
 
-        return tableView
+        return collectionView
     }()
 
     private let errorStateView: UIView = UIView()
@@ -28,7 +26,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
         return GetCarRepairListUseCase(presenter: self, carRepairAPI: carRepairAPI)
     }()
 
-    private lazy var dataProvider = CarRepairTableViewDataProvider()
+    private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView)
 
     private var carRepairAPI: CarRepairAPIProtocol
 
@@ -58,7 +56,6 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
         super.viewDidLoad()
 
         setupView()
-        setupDelegate()
         getCarRepair()
     }
 
@@ -67,11 +64,6 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
     private func setupView() {
         title = "Car Repair"
         view.backgroundColor = .white
-    }
-
-    private func setupDelegate() {
-        tableView.delegate = dataProvider
-        tableView.dataSource = dataProvider
     }
 
     private func getCarRepair() {
@@ -83,7 +75,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
         errorStateView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
 
-        view.addSubview(equalConstraintsFor: tableView)
+        view.addSubview(equalConstraintsFor: collectionView)
         view.addSubview(equalConstraintsFor: errorStateView)
 
         view.addSubview(activityIndicator, constraints: [
@@ -94,7 +86,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
 
     private func showLoading() {
         activityIndicator.startAnimating()
-        tableView.isHidden = true
+        collectionView.isHidden = true
         errorStateView.isHidden = true
     }
 
@@ -106,16 +98,16 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
 
     func showCarRepair(list: [CarRepair]) {
         dataProvider.update(carRepairList: list)
-        tableView.reloadData()
+        collectionView.reloadData()
 
         removeLoading()
-        tableView.isHidden = false
+        collectionView.isHidden = false
         errorStateView.isHidden = true
     }
 
     func showError(message: String) {
         removeLoading()
-        tableView.isHidden = true
+        collectionView.isHidden = true
         errorStateView.isHidden = false
     }
 }

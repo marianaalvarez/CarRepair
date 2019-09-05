@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class CarRepairViewCell: UITableViewCell {
+final class CarRepairViewCell: UICollectionViewCell {
     static let reuseIdentifier = "CarRepairViewCell"
     private var carRepairView: CarRepairView!
 
@@ -21,12 +21,10 @@ final class CarRepairViewCell: UITableViewCell {
         carRepairView.removeFromSuperview()
     }
 
-    // MARK: Initializer
+    // MARK: Initializers
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        setupView()
+    override init(frame: CGRect = .zero) {
+        super.init(frame: frame)
     }
 
     required init?(coder aDecoder: NSCoder) {
