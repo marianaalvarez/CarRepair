@@ -13,9 +13,9 @@ struct CarRepairDetail: Codable {
     let rating: Double
     let address: String
     let phoneNumber: String
-    let isOpen: Bool
+    let isOpen: Bool?
     let website: String
-    let photos: [Photo]
+    let photos: [Photo]?
 
     enum RootKeys: String, CodingKey {
         case name, rating, website

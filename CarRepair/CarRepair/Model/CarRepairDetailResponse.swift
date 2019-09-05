@@ -9,7 +9,7 @@
 import Foundation
 
 struct CarRepairDetailReponse: Codable {
-    let carRepair: CarRepair
+    let carRepair: CarRepairDetail
     let status: String
 
     enum CodingKeys: String, CodingKey {
