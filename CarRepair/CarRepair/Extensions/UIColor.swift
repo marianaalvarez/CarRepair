@@ -13,6 +13,14 @@ extension UIColor {
         return UIColor(red: 94.0 / 255.0, green: 92.0 / 255.0, blue: 92.0 / 255.0, alpha: 1.0)
     }
 
+    static var lightGrey: UIColor {
+        return UIColor(red: 218.0 / 255.0, green: 218.0 / 255.0, blue: 218.0 / 255.0, alpha: 1.0)
+    }
+
+    class var whiteSmoke: UIColor {
+        return UIColor(red: 247.0 / 255.0, green: 247.0 / 255.0, blue: 247.0 / 255.0, alpha: 1.0)
+    }
+
     static var blueWater: UIColor {
         return UIColor(red: 1.0 / 255.0, green: 153.0 / 255.0, blue: 153.0 / 255.0, alpha: 1.0)
     }
@@ -22,6 +30,6 @@ extension UIColor {
     }
 
     static var redTomato: UIColor {
-        return UIColor(red: 2.0 / 255.0, green: 32.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+        return UIColor(red: 232.0 / 255.0, green: 8.0 / 255.0, blue: 8.0 / 255.0, alpha: 1.0)
     }
 }

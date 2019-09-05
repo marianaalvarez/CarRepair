@@ -14,7 +14,7 @@ final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource
 
     private lazy var cellSize: CGSize = {
         let width = collectionView.frame.width
-        return CGSize(width: width, height: 160)
+        return CGSize(width: width, height: 180)
     }()
 
     private lazy var cellEdgeInsets: UIEdgeInsets = {
@@ -88,8 +88,8 @@ final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource
         return cellEdgeInsets
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 0
+//    }
 }
 

@@ -12,7 +12,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .whiteSmoke
         collectionView.bounces = false
         collectionView.accessibilityIdentifier = "car_repair_table_view"
 
@@ -63,7 +63,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
 
     private func setupView() {
         title = "Car Repair"
-        view.backgroundColor = .white
+        view.backgroundColor = .whiteSmoke
     }
 
     private func getCarRepair() {

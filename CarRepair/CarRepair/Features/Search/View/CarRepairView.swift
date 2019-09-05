@@ -27,6 +27,7 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.image = .imagePlaceholder
 
         return imageView
     }()
@@ -57,6 +58,7 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
+        imageView.image = .star
 
         return imageView
     }()
@@ -72,10 +74,10 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
         return label
     }()
 
-    private let openingHourLabel: UILabel = {
+    private lazy var openingHourLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 12)
-        label.textColor = .redTomato
+        label.textColor = viewModel.isOpen ? .vividGreen : .redTomato
         label.numberOfLines = 1
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -107,6 +109,9 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
 
     private func setupView() {
         backgroundColor = .clear
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        layer.shadowOpacity = 0.07
     }
 
     private func setupLabels() {
@@ -121,7 +126,7 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
 
         contentView.addSubview(imageView, constraints: [
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 90),
+            imageView.heightAnchor.constraint(equalToConstant: 95),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
@@ -145,8 +150,10 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
         ])
 
         contentView.addSubview(starIcon, constraints: [
-            starIcon.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 4),
-            starIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16)
+            starIcon.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 6),
+            starIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            starIcon.heightAnchor.constraint(equalToConstant: 12),
+            starIcon.widthAnchor.constraint(equalToConstant: 12)
         ])
 
         contentView.addSubview(ratingLabel, constraints: [

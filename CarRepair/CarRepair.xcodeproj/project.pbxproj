@@ -10,7 +10,6 @@
 		C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293D231DBC6600B9AFF9 /* AppDelegate.swift */; };
 		C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */; };
 		C4392943231DBC6600B9AFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392941231DBC6600B9AFF9 /* Main.storyboard */; };
-		C4392945231DBC6700B9AFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4392944231DBC6700B9AFF9 /* Assets.xcassets */; };
 		C4392948231DBC6700B9AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */; };
 		C4392953231DBC6700B9AFF9 /* CarRepairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */; };
 		C439296B231F006B00B9AFF9 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296A231F006B00B9AFF9 /* CarRepair.swift */; };
@@ -45,6 +44,8 @@
 		C485D789232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D788232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift */; };
 		C485D78B232087FC00AB30A6 /* GetCarRepairPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D78A232087FC00AB30A6 /* GetCarRepairPhotoPresenter.swift */; };
 		C485D78D23208A2E00AB30A6 /* CarRepairViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D78C23208A2E00AB30A6 /* CarRepairViewFactory.swift */; };
+		C485D78F2320ACCA00AB30A6 /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D78E2320ACCA00AB30A6 /* UIImage+Assets.swift */; };
+		C485D7912320AFDA00AB30A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C485D7902320AFDA00AB30A6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,6 @@
 		C439293D231DBC6600B9AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewController.swift; sourceTree = "<group>"; };
 		C4392942231DBC6600B9AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4392944231DBC6700B9AFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4392947231DBC6700B9AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4392949231DBC6700B9AFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C439294E231DBC6700B9AFF9 /* CarRepairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRepairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +100,8 @@
 		C485D788232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairPhotoUseCase.swift; sourceTree = "<group>"; };
 		C485D78A232087FC00AB30A6 /* GetCarRepairPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairPhotoPresenter.swift; sourceTree = "<group>"; };
 		C485D78C23208A2E00AB30A6 /* CarRepairViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewFactory.swift; sourceTree = "<group>"; };
+		C485D78E2320ACCA00AB30A6 /* UIImage+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
+		C485D7902320AFDA00AB30A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,8 +149,8 @@
 				C4392997231F632200B9AFF9 /* Shared */,
 				C439295D231EFE5900B9AFF9 /* Features */,
 				C439293D231DBC6600B9AFF9 /* AppDelegate.swift */,
+				C485D7902320AFDA00AB30A6 /* Assets.xcassets */,
 				C4392941231DBC6600B9AFF9 /* Main.storyboard */,
-				C4392944231DBC6700B9AFF9 /* Assets.xcassets */,
 				C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */,
 				C4392949231DBC6700B9AFF9 /* Info.plist */,
 			);
@@ -332,6 +334,7 @@
 				C43929A5231F6DC300B9AFF9 /* UIColor.swift */,
 				C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */,
 				C485D7862320854100AB30A6 /* UIImage+Cache.swift */,
+				C485D78E2320ACCA00AB30A6 /* UIImage+Assets.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -426,7 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4392948231DBC6700B9AFF9 /* LaunchScreen.storyboard in Resources */,
-				C4392945231DBC6700B9AFF9 /* Assets.xcassets in Resources */,
+				C485D7912320AFDA00AB30A6 /* Assets.xcassets in Resources */,
 				C4392943231DBC6600B9AFF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +474,7 @@
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
 				C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */,
+				C485D78F2320ACCA00AB30A6 /* UIImage+Assets.swift in Sources */,
 				C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */,
 				C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */,
 				C4392971231F0F9300B9AFF9 /* CarRepairDetail.swift in Sources */,

@@ -10,6 +10,7 @@ struct CarRepairViewModel {
     let name: String
     let rating: String
     let address: String
+    let isOpen: Bool
     var openNow: String
     let photos: [Photo]?
 
@@ -17,6 +18,7 @@ struct CarRepairViewModel {
         self.name = carRepair.name
         self.rating = "\(carRepair.rating)"
         self.address = carRepair.address
+        self.isOpen = carRepair.isOpen ?? false
         self.openNow = ""
         self.photos = carRepair.photos
 
