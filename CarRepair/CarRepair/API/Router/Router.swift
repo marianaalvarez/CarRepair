@@ -10,9 +10,9 @@ import Foundation
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
+    private let session = URLSession.shared
 
     func request<T>(route: EndPoint, callback: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
-        let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
@@ -46,18 +46,33 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         self.task?.resume()
     }
 
-    func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
+    func request(route: EndPoint, callback: @escaping (Result<Data>) -> Void) {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
-                completion(data, response, error)
+                if error != nil {
+                    DispatchQueue.main.async {
+                        callback(.failure("Could not load data"))
+                    }
+                    return
+                }
+
+                DispatchQueue.main.async {
+                    if let data = data {
+                        callback(.success(data))
+                    } else {
+                        callback(.failure(NetworkResponse.internetConnection.rawValue))
+                    }
+                }
             })
         } catch {
-            completion(nil, nil, error)
+            callback(.failure(NetworkResponse.internetConnection.rawValue))
         }
         self.task?.resume()
     }
+
+    
 
     fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
         var request = URLRequest(url: route.baseURL.appendingPathComponent(route.path),

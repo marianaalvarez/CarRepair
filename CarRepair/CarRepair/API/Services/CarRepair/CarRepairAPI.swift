@@ -10,6 +10,7 @@ import Foundation
 
 protocol CarRepairAPIProtocol {
     func getCarRepairList(callback: @escaping (Result<CarRepairReponse>) -> Void)
+    func getCarRepairPhoto(id: String, callback: @escaping (Result<Data>) -> Void)
 }
 
 final class CarRepairAPI: CarRepairAPIProtocol {
@@ -25,5 +26,13 @@ final class CarRepairAPI: CarRepairAPIProtocol {
                     callback(result)
                 }
             }
+    }
+
+    func getCarRepairPhoto(id: String, callback: @escaping (Result<Data>) -> Void) {
+        service.request(route: .getPhoto(id: id)) { result in
+            DispatchQueue.main.async {
+                callback(result)
+            }
+        }
     }
 }

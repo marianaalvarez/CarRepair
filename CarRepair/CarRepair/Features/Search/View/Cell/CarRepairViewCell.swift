@@ -36,7 +36,7 @@ final class CarRepairViewCell: UITableViewCell {
     // MARK: Public functions
 
     func setup(viewModel: CarRepairViewModel) {
-        carRepairView = CarRepairView(viewModel: viewModel)
+        carRepairView = CarRepairViewFactory.make(with: viewModel)
 
         carRepairView.translatesAutoresizingMaskIntoConstraints = false
 

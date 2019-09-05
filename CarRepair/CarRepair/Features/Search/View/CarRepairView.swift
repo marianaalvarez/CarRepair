@@ -8,8 +8,7 @@
 
 import UIKit
 
-final class CarRepairView: UIView {
-
+final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
     private let contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -20,10 +19,10 @@ final class CarRepairView: UIView {
         return view
     }()
 
-    private let imageVIew: UIImageView = {
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
 
         return imageView
@@ -93,7 +92,6 @@ final class CarRepairView: UIView {
         setupLayout()
         setupView()
         setupLabels()
-        loadImage()
     }
 
     // MARK: NSCoding conforms
@@ -115,22 +113,18 @@ final class CarRepairView: UIView {
         openingHourLabel.text = viewModel.openNow
     }
 
-    private func loadImage() {
-        
-    }
-
     private func setupLayout() {
         addSubview(equalConstraintsFor: contentView)
 
-        contentView.addSubview(imageVIew, constraints: [
-            imageVIew.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageVIew.heightAnchor.constraint(equalToConstant: 90),
-            imageVIew.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageVIew.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        contentView.addSubview(imageView, constraints: [
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 90),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
 
         contentView.addSubview(nameLabel, constraints: [
-            nameLabel.topAnchor.constraint(equalTo: imageVIew.bottomAnchor, constant: 8),
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
@@ -161,5 +155,21 @@ final class CarRepairView: UIView {
             openingHourLabel.leadingAnchor.constraint(equalTo: ratingLabel.trailingAnchor, constant: 6),
             openingHourLabel.centerYAnchor.constraint(equalTo: starIcon.centerYAnchor)
         ])
+    }
+
+    // MARK: GetCarRepairPhotoPresenter conforms
+
+    func show(photo: Data) {
+        if let photoId = viewModel.photos?[0].photoReference {
+            imageView.imageFrom(data: photo, photoId: photoId, placeHolder: UIImage())
+        }
+    }
+
+    func showEmptyState() {
+
+    }
+
+    func show(cachedImage: UIImage) {
+        imageView.image = cachedImage
     }
 }
