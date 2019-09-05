@@ -20,13 +20,12 @@ final class GetCarRepairDetailUseCase: Interactor {
     }
 
     func run() {
-        carRepairAPI.getCarRepairDetail { result in
+        carRepairAPI.getCarRepairDetail(id: placeId) { result in
             switch result {
             case .success(let response):
                 self.presenter.show(carRepair: response.carRepair)
             case .failure(let message):
                 self.presenter.showError(message: message)
-
             }
         }
     }

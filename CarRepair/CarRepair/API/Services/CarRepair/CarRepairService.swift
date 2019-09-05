@@ -11,6 +11,7 @@ import Foundation
 enum CarRepairService {
     case getCarRepairList
     case getPhoto(id: String)
+    case getCarRepairDetail(id: String)
 }
 
 extension CarRepairService: EndPointType {
@@ -28,6 +29,8 @@ extension CarRepairService: EndPointType {
             return "nearbysearch/json"
         case .getPhoto(_):
             return "photo"
+        case .getCarRepairDetail(_):
+            return "details/json"
         }
     }
 
@@ -40,6 +43,8 @@ extension CarRepairService: EndPointType {
         case .getCarRepairList:
             return .requestParameters(urlParameters: parameters, headers: nil)
         case .getPhoto(_):
+            return .requestParameters(urlParameters: parameters, headers: nil)
+        case .getCarRepairDetail(_):
             return .requestParameters(urlParameters: parameters, headers: nil)
         }
     }
@@ -60,6 +65,10 @@ extension CarRepairService: EndPointType {
             return [
                 "maxwidth": 400,
                 "photoreference": id
+            ]
+        case .getCarRepairDetail(let id):
+            return [
+                "placeid": id
             ]
         }
     }
