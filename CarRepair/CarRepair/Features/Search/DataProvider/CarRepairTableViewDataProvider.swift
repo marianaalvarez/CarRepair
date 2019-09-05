@@ -87,9 +87,5 @@ final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource
 
         return cellEdgeInsets
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
 }
 
