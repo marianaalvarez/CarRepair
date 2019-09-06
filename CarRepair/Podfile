@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'CarRepair' do
+  use_frameworks!
+
+  target 'CarRepairTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Nimble', '~> 7.0'
+    pod 'Quick', '~> 2.0'
+  end
+
+end
