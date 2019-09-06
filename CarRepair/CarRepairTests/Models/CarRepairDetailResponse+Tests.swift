@@ -12,7 +12,7 @@ import Foundation
 
 extension CarRepairDetailReponse {
     static func successMock() -> CarRepairDetailReponse {
-        let data = MapperHelper.dataJSON(file: "places_success")
+        let data = MapperHelper.dataJSON(file: "detail_success")
         let response = try! JSONDecoder().decode(self, from: data)
         return response
     }
