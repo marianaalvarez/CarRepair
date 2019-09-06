@@ -54,6 +54,8 @@
 		C485D79D23218FF800AB30A6 /* CarRepairDetailViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D79C23218FF800AB30A6 /* CarRepairDetailViewFactory.swift */; };
 		C485D79F2321966B00AB30A6 /* CarRepairDetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D79E2321966B00AB30A6 /* CarRepairDetailViewControllerFactory.swift */; };
 		C485D7A22321980300AB30A6 /* CarRepairDataProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7A12321980300AB30A6 /* CarRepairDataProviderDelegate.swift */; };
+		C485D7A42321F07900AB30A6 /* RequestLocationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7A32321F07900AB30A6 /* RequestLocationUseCase.swift */; };
+		C485D7A62321F0E600AB30A6 /* RequestLocationErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7A52321F0E600AB30A6 /* RequestLocationErrorPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,8 @@
 		C485D79C23218FF800AB30A6 /* CarRepairDetailViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailViewFactory.swift; sourceTree = "<group>"; };
 		C485D79E2321966B00AB30A6 /* CarRepairDetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDetailViewControllerFactory.swift; sourceTree = "<group>"; };
 		C485D7A12321980300AB30A6 /* CarRepairDataProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairDataProviderDelegate.swift; sourceTree = "<group>"; };
+		C485D7A32321F07900AB30A6 /* RequestLocationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationUseCase.swift; sourceTree = "<group>"; };
+		C485D7A52321F0E600AB30A6 /* RequestLocationErrorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationErrorPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,7 @@
 				C439299A231F662300B9AFF9 /* GetCarRepairListUseCase.swift */,
 				C485D788232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift */,
 				C485D79823218AD300AB30A6 /* GetCarRepairDetailUseCase.swift */,
+				C485D7A32321F07900AB30A6 /* RequestLocationUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				C439299E231F666E00B9AFF9 /* GetCarRepairListPresenter.swift */,
 				C485D78A232087FC00AB30A6 /* GetCarRepairPhotoPresenter.swift */,
 				C485D79A23218AF000AB30A6 /* GetCarRepairDetailPresenter.swift */,
+				C485D7A52321F0E600AB30A6 /* RequestLocationErrorPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -506,12 +512,14 @@
 				C485D7852320827200AB30A6 /* CarRepairViewControllerFactory.swift in Sources */,
 				C43929A3231F6C1900B9AFF9 /* CarRepairView.swift in Sources */,
 				C4392996231F23C300B9AFF9 /* CarRepairAPI.swift in Sources */,
+				C485D7A42321F07900AB30A6 /* RequestLocationUseCase.swift in Sources */,
 				C485D79B23218AF000AB30A6 /* GetCarRepairDetailPresenter.swift in Sources */,
 				C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */,
 				C485D79D23218FF800AB30A6 /* CarRepairDetailViewFactory.swift in Sources */,
 				C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */,
 				C439297F231F197C00B9AFF9 /* EndPointType.swift in Sources */,
 				C4392984231F1B6800B9AFF9 /* ParameterEncoding.swift in Sources */,
+				C485D7A62321F0E600AB30A6 /* RequestLocationErrorPresenter.swift in Sources */,
 				C485D78F2320ACCA00AB30A6 /* UIImage+Assets.swift in Sources */,
 				C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */,
 				C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */,
@@ -689,6 +697,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6XLP82WW4;
 				INFOPLIST_FILE = CarRepair/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6XLP82WW4;
 				INFOPLIST_FILE = CarRepair/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

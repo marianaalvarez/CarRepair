@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate {
+class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate,
+CLLocationManagerDelegate, RequestLocationErrorPresenter {
+
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,13 +25,13 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarR
     private let errorStateView: UIView = UIView()
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
 
-    private lazy var getCarRepairListUseCase: Interactor = {
-        return GetCarRepairListUseCase(presenter: self, carRepairAPI: carRepairAPI)
-    }()
+    private var getCarRepairListUseCase: GetCarRepairListUseCase?
 
     private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView, delegate: self)
 
     private var carRepairAPI: CarRepairAPIProtocol
+
+    private lazy var useCase = RequestLocationUseCase(presenter: self)
 
     // MARK: Initializer
 
@@ -48,6 +51,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarR
         super.loadView()
 
         setupLayout()
+        errorStateView.isHidden = true
     }
 
     // MARK: Lifecycle
@@ -56,7 +60,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarR
         super.viewDidLoad()
 
         setupView()
-        getCarRepair()
+        setupUseCase()
     }
 
     // MARK: Private functions
@@ -66,9 +70,14 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarR
         view.backgroundColor = .whiteSmoke
     }
 
-    private func getCarRepair() {
+    private func setupUseCase() {
+        useCase.run()
+    }
+
+    private func getCarRepair(location: [String]) {
         showLoading()
-        getCarRepairListUseCase.run()
+        getCarRepairListUseCase = GetCarRepairListUseCase(location: location, presenter: self, carRepairAPI: carRepairAPI)
+        getCarRepairListUseCase?.run()
     }
 
     private func setupLayout() {
@@ -116,6 +125,28 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarR
     func show(carRepair: CarRepair) {
         let viewController = CarRepairDetaiViewlControllerFactory.make(with: carRepair.id)
         self.navigationController?.show(viewController, sender: nil)
+    }
+
+    // MARK: RequestLocationErrorPresenter conforms
+
+    func showLocationError() {
+        print("Location error")
+    }
+
+    // MARK: CLLocationManagerDelegate conforms
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else {
+            showLocationError()
+            return
+        }
+
+        let location = [String(locValue.latitude), String(locValue.longitude)]
+        getCarRepair(location: location)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        showLocationError()
     }
 }
 

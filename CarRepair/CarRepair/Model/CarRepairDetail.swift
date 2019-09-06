@@ -14,7 +14,7 @@ struct CarRepairDetail: Codable {
     let address: String
     let phoneNumber: String
     let isOpen: Bool?
-    let website: String
+    let website: String?
     let photos: [Photo]?
 
     enum RootKeys: String, CodingKey {
@@ -35,10 +35,10 @@ struct CarRepairDetail: Codable {
         rating = try container.decode(Double.self, forKey: .rating)
         address = try container.decode(String.self, forKey: .address)
         phoneNumber = try container.decode(String.self, forKey: .phoneNumber)
-        website = try container.decode(String.self, forKey: .website)
-        photos = try container.decode([Photo].self, forKey: .photos)
-        let openingHours = try container.nestedContainer(keyedBy: OpeningHoursKeys.self, forKey: .openingHours)
-        isOpen = try openingHours.decode(Bool.self, forKey: .isOpen)
+        website = try? container.decode(String.self, forKey: .website)
+        photos = try? container.decode([Photo].self, forKey: .photos)
+        let openingHours = try? container.nestedContainer(keyedBy: OpeningHoursKeys.self, forKey: .openingHours)
+        isOpen = try openingHours?.decode(Bool.self, forKey: .isOpen)
     }
 }
 

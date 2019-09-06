@@ -11,14 +11,16 @@ import Foundation
 final class GetCarRepairListUseCase: Interactor {
     private unowned let presenter: GetCarRepairListPresenter
     private let carRepairAPI: CarRepairAPIProtocol
+    private let location: [String]
 
-    init(presenter: GetCarRepairListPresenter, carRepairAPI: CarRepairAPIProtocol) {
+    init(location: [String], presenter: GetCarRepairListPresenter, carRepairAPI: CarRepairAPIProtocol) {
+        self.location = location
         self.presenter = presenter
         self.carRepairAPI = carRepairAPI
     }
 
     func run() {
-        carRepairAPI.getCarRepairList { result in
+        carRepairAPI.getCarRepairList(location: location) { result in
             switch result {
             case .success(let response):
                 self.presenter.showCarRepair(list: response.carRepairList)

@@ -25,6 +25,7 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         label.textColor = .darkGrey
         label.numberOfLines = 1
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -76,6 +77,7 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         label.textColor = .darkGrey
         label.numberOfLines = 2
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -96,6 +98,7 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         label.textColor = .darkGrey
         label.numberOfLines = 1
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -116,6 +119,7 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         label.textColor = .darkGrey
         label.numberOfLines = 1
         label.textAlignment = .left
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

@@ -21,7 +21,7 @@ struct CarRepairDetailViewModel {
         self.rating = "\(carRepair.rating)"
         self.address = carRepair.address
         self.phoneNumber = carRepair.phoneNumber
-        self.webSite = carRepair.website
+        self.webSite = carRepair.website ?? ""
         self.isOpen = carRepair.isOpen ?? false
         self.openNow = ""
         self.photos = carRepair.photos

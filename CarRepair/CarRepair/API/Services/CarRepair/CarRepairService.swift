@@ -9,7 +9,7 @@
 import Foundation
 
 enum CarRepairService {
-    case getCarRepairList
+    case getCarRepairList(location: [String])
     case getPhoto(id: String)
     case getCarRepairDetail(id: String)
 }
@@ -55,9 +55,9 @@ extension CarRepairService: EndPointType {
 
     public var parameters: [String : Any] {
         switch self {
-        case .getCarRepairList:
+        case .getCarRepairList(let location):
             return [
-                "location": "-23.556796,-46.649749",
+                "location": (location as NSArray).componentsJoined(by: ","),
                 "radius": 5000,
                 "type": "car_repair"
             ]
