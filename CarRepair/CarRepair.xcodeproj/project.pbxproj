@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		62DD685F62CA497239E77C3A /* Pods_CarRepairTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3B5D397E6F37193417905 /* Pods_CarRepairTests.framework */; };
+		C438D05C2322279800F4E9B1 /* CarRepairAPISpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438D05B2322279800F4E9B1 /* CarRepairAPISpy.swift */; };
 		C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293D231DBC6600B9AFF9 /* AppDelegate.swift */; };
 		C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */; };
 		C4392943231DBC6600B9AFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392941231DBC6600B9AFF9 /* Main.storyboard */; };
 		C4392948231DBC6700B9AFF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392946231DBC6700B9AFF9 /* LaunchScreen.storyboard */; };
-		C4392953231DBC6700B9AFF9 /* CarRepairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */; };
+		C4392953231DBC6700B9AFF9 /* GetCarRepairListUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4392952231DBC6700B9AFF9 /* GetCarRepairListUseCaseSpec.swift */; };
 		C439296B231F006B00B9AFF9 /* CarRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296A231F006B00B9AFF9 /* CarRepair.swift */; };
 		C439296D231F0B4700B9AFF9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296C231F0B4700B9AFF9 /* Photo.swift */; };
 		C439296F231F0B6700B9AFF9 /* CarRepairResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439296E231F0B6700B9AFF9 /* CarRepairResponse.swift */; };
@@ -81,6 +82,7 @@
 		2AD3B5D397E6F37193417905 /* Pods_CarRepairTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRepairTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D11F4481FB771D27C425427 /* Pods-CarRepair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRepair.release.xcconfig"; path = "Target Support Files/Pods-CarRepair/Pods-CarRepair.release.xcconfig"; sourceTree = "<group>"; };
 		93635C75697790EE4EA6A19E /* Pods_CarRepair.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRepair.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C438D05B2322279800F4E9B1 /* CarRepairAPISpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairAPISpy.swift; sourceTree = "<group>"; };
 		C439293A231DBC6600B9AFF9 /* CarRepair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRepair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439293D231DBC6600B9AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +90,7 @@
 		C4392947231DBC6700B9AFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4392949231DBC6700B9AFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C439294E231DBC6700B9AFF9 /* CarRepairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRepairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairTests.swift; sourceTree = "<group>"; };
+		C4392952231DBC6700B9AFF9 /* GetCarRepairListUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairListUseCaseSpec.swift; sourceTree = "<group>"; };
 		C4392954231DBC6700B9AFF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C439296A231F006B00B9AFF9 /* CarRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepair.swift; sourceTree = "<group>"; };
 		C439296C231F0B4700B9AFF9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -230,7 +232,6 @@
 				C44551AA2322208400958D03 /* Features */,
 				C44551A92322207B00958D03 /* Helpers */,
 				C44551A82322207500958D03 /* Models */,
-				C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */,
 				C4392954231DBC6700B9AFF9 /* Info.plist */,
 			);
 			path = CarRepairTests;
@@ -439,6 +440,7 @@
 		C44551A72322202C00958D03 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				C4392952231DBC6700B9AFF9 /* GetCarRepairListUseCaseSpec.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -482,6 +484,7 @@
 			children = (
 				C44551BF2322230C00958D03 /* GetCarRepairListPresenterSpy.swift */,
 				C44551C12322237200958D03 /* GetCarRepairDetailPresenterSpy.swift */,
+				C438D05B2322279800F4E9B1 /* CarRepairAPISpy.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -724,11 +727,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44551AD232220B800958D03 /* MapperHelper.swift in Sources */,
-				C4392953231DBC6700B9AFF9 /* CarRepairTests.swift in Sources */,
+				C4392953231DBC6700B9AFF9 /* GetCarRepairListUseCaseSpec.swift in Sources */,
 				C44551BB2322221400958D03 /* RepairCarResponse+Tests.swift in Sources */,
 				C44551C22322237200958D03 /* GetCarRepairDetailPresenterSpy.swift in Sources */,
 				C44551BD232222B000958D03 /* CarRepairDetailResponse+Tests.swift in Sources */,
 				C44551C02322230C00958D03 /* GetCarRepairListPresenterSpy.swift in Sources */,
+				C438D05C2322279800F4E9B1 /* CarRepairAPISpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
