@@ -27,6 +27,7 @@ enum NetworkResponse: String {
     case badRequest = "Bad request"
     case noData = "Response returned with no data to decode"
     case unableToDecode = "Response could not be decoded"
+    case couldNotLoad = "Could not load data"
 }
 
 enum StatusCodeError: Int, Error {

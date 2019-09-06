@@ -13,37 +13,20 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     private let session = URLSession.shared
 
     func request<T>(route: EndPoint, callback: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
-        do {
-            let request = try self.buildRequest(from: route)
-            task = session.dataTask(with: request, completionHandler: { data, response, error in
-                if error != nil {
-                    callback(.failure(NetworkResponse.internetConnection.rawValue))
-                }
+        request(route: route) { responseData in
 
-                if let response = response as? HTTPURLResponse {
-                    let result = self.handleNetworkResponse(response)
-
-                    switch result {
-                    case .success:
-                        guard let responseData = data else {
-                            callback(.failure(NetworkResponse.noData.rawValue))
-                            return
-                        }
-                        do {
-                            let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
-                            callback(.success(apiResponse))
-                        } catch {
-                            callback(.failure(NetworkResponse.unableToDecode.rawValue))
-                        }
-                    case .failure(let message):
-                        callback(.failure(message))
-                    }
+            switch responseData {
+            case.success(let data):
+                do {
+                    let apiResponse = try JSONDecoder().decode(T.self, from: data)
+                    callback(.success(apiResponse))
+                } catch {
+                    callback(.failure(NetworkResponse.unableToDecode.rawValue))
                 }
-            })
-        } catch {
-            callback(.failure(NetworkResponse.internetConnection.rawValue))
+            case .failure(let message):
+                callback(.failure(message))
+            }
         }
-        self.task?.resume()
     }
 
     func request(route: EndPoint, callback: @escaping (Result<Data>) -> Void) {
@@ -53,7 +36,7 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 if error != nil {
                     DispatchQueue.main.async {
-                        callback(.failure("Could not load data"))
+                        callback(.failure(NetworkResponse.couldNotLoad.rawValue))
                     }
                     return
                 }

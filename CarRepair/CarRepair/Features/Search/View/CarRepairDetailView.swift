@@ -245,6 +245,5 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
     func show(cachedImage: UIImage) {
         imageView.image = cachedImage
     }
-    
 }
 
