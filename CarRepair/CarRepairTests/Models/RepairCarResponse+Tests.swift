@@ -12,7 +12,15 @@ import Foundation
 
 extension CarRepairReponse {
     static func successMock() -> CarRepairReponse {
-        let data = MapperHelper.dataJSON(file: "places_success")
+        return mock(file: "places_success")
+    }
+
+    static func emptyMock() -> CarRepairReponse {
+        return mock(file: "places_empty")
+    }
+
+    private static func mock(file: String) -> CarRepairReponse {
+        let data = MapperHelper.dataJSON(file: file)
         let response = try! JSONDecoder().decode(self, from: data)
         return response
     }

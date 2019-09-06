@@ -12,6 +12,7 @@
 		C438D05E23222CB200F4E9B1 /* GetCarRepairDetailUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438D05D23222CB200F4E9B1 /* GetCarRepairDetailUseCaseSpec.swift */; };
 		C438D0602322D68F00F4E9B1 /* CarRepairEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438D05F2322D68F00F4E9B1 /* CarRepairEmptyStateView.swift */; };
 		C438D0622322D7E000F4E9B1 /* CarRepairEmptyStateViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C438D0612322D7E000F4E9B1 /* CarRepairEmptyStateViewFactory.swift */; };
+		C438D0662322F4E100F4E9B1 /* places_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = C438D0652322F4E100F4E9B1 /* places_empty.json */; };
 		C439293E231DBC6600B9AFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293D231DBC6600B9AFF9 /* AppDelegate.swift */; };
 		C4392940231DBC6600B9AFF9 /* CarRepairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */; };
 		C4392943231DBC6600B9AFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4392941231DBC6600B9AFF9 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		C438D05D23222CB200F4E9B1 /* GetCarRepairDetailUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairDetailUseCaseSpec.swift; sourceTree = "<group>"; };
 		C438D05F2322D68F00F4E9B1 /* CarRepairEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairEmptyStateView.swift; sourceTree = "<group>"; };
 		C438D0612322D7E000F4E9B1 /* CarRepairEmptyStateViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairEmptyStateViewFactory.swift; sourceTree = "<group>"; };
+		C438D0652322F4E100F4E9B1 /* places_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places_empty.json; sourceTree = "<group>"; };
 		C439293A231DBC6600B9AFF9 /* CarRepair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRepair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C439293D231DBC6600B9AFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C439293F231DBC6600B9AFF9 /* CarRepairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 			children = (
 				C44551B22322214800958D03 /* places_success.json */,
 				C44551B82322219200958D03 /* detail_success.json */,
+				C438D0652322F4E100F4E9B1 /* places_empty.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44551B92322219200958D03 /* detail_success.json in Resources */,
+				C438D0662322F4E100F4E9B1 /* places_empty.json in Resources */,
 				C44551B32322214800958D03 /* places_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

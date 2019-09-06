@@ -23,4 +23,10 @@ final class GetCarRepairListPresenterSpy: GetCarRepairListPresenter {
         invokedShowError = true
         invokedShowErrorParameters = (message, ())
     }
+
+    var invokedShowEmptyState = false
+
+    func showEmptyState() {
+        invokedShowEmptyState = true
+    }
 }

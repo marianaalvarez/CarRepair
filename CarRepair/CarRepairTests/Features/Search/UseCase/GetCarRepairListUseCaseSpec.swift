@@ -74,6 +74,26 @@ class GetCarRepairListUseCaseSpec: QuickSpec {
                     expect(presenter.invokedShowErrorParameters?.message) == errorMessage
                 }
             }
+
+            context("when empty state") {
+
+                beforeEach {
+                    let emptyMock = CarRepairReponse.emptyMock()
+                    setup(result: .success(emptyMock))
+                }
+
+                it("should call getCarRepairList API method") {
+                    expect(api.invokedGetCarRepairList) == true
+                }
+
+                it("should pass parameters correctly through API") {
+                    expect(api.invokedGetCarRepairListParameters?.location) == location
+                }
+
+                it("should call showEmptyState presenter method") {
+                    expect(presenter.invokedShowEmptyState) == true
+                }
+            }
         }
     }
 }
