@@ -40,6 +40,13 @@
 		C43929A8231F711200B9AFF9 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */; };
 		C43929AB231F76AB00B9AFF9 /* CarRepairViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */; };
 		C43929AD231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */; };
+		C44551AD232220B800958D03 /* MapperHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44551AC232220B800958D03 /* MapperHelper.swift */; };
+		C44551B32322214800958D03 /* places_success.json in Resources */ = {isa = PBXBuildFile; fileRef = C44551B22322214800958D03 /* places_success.json */; };
+		C44551B92322219200958D03 /* detail_success.json in Resources */ = {isa = PBXBuildFile; fileRef = C44551B82322219200958D03 /* detail_success.json */; };
+		C44551BB2322221400958D03 /* RepairCarResponse+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44551BA2322221400958D03 /* RepairCarResponse+Tests.swift */; };
+		C44551BD232222B000958D03 /* CarRepairDetailResponse+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44551BC232222B000958D03 /* CarRepairDetailResponse+Tests.swift */; };
+		C44551C02322230C00958D03 /* GetCarRepairListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44551BF2322230C00958D03 /* GetCarRepairListPresenterSpy.swift */; };
+		C44551C22322237200958D03 /* GetCarRepairDetailPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44551C12322237200958D03 /* GetCarRepairDetailPresenterSpy.swift */; };
 		C485D7852320827200AB30A6 /* CarRepairViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7842320827200AB30A6 /* CarRepairViewControllerFactory.swift */; };
 		C485D7872320854100AB30A6 /* UIImage+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D7862320854100AB30A6 /* UIImage+Cache.swift */; };
 		C485D789232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485D788232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift */; };
@@ -110,6 +117,13 @@
 		C43929A7231F711200B9AFF9 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		C43929AA231F76AB00B9AFF9 /* CarRepairViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewCell.swift; sourceTree = "<group>"; };
 		C43929AC231F77CE00B9AFF9 /* CarRepairTableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairTableViewDataProvider.swift; sourceTree = "<group>"; };
+		C44551AC232220B800958D03 /* MapperHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperHelper.swift; sourceTree = "<group>"; };
+		C44551B22322214800958D03 /* places_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places_success.json; sourceTree = "<group>"; };
+		C44551B82322219200958D03 /* detail_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = detail_success.json; sourceTree = "<group>"; };
+		C44551BA2322221400958D03 /* RepairCarResponse+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepairCarResponse+Tests.swift"; sourceTree = "<group>"; };
+		C44551BC232222B000958D03 /* CarRepairDetailResponse+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarRepairDetailResponse+Tests.swift"; sourceTree = "<group>"; };
+		C44551BF2322230C00958D03 /* GetCarRepairListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairListPresenterSpy.swift; sourceTree = "<group>"; };
+		C44551C12322237200958D03 /* GetCarRepairDetailPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairDetailPresenterSpy.swift; sourceTree = "<group>"; };
 		C485D7842320827200AB30A6 /* CarRepairViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRepairViewControllerFactory.swift; sourceTree = "<group>"; };
 		C485D7862320854100AB30A6 /* UIImage+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Cache.swift"; sourceTree = "<group>"; };
 		C485D788232087D300AB30A6 /* GetCarRepairPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarRepairPhotoUseCase.swift; sourceTree = "<group>"; };
@@ -160,7 +174,6 @@
 				E6975B6332D321BBE7F555C8 /* Pods-CarRepairTests.debug.xcconfig */,
 				F40455E4A2D2024A118FB047 /* Pods-CarRepairTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +226,10 @@
 		C4392951231DBC6700B9AFF9 /* CarRepairTests */ = {
 			isa = PBXGroup;
 			children = (
+				C44551AB2322209500958D03 /* Mocks */,
+				C44551AA2322208400958D03 /* Features */,
+				C44551A92322207B00958D03 /* Helpers */,
+				C44551A82322207500958D03 /* Models */,
 				C4392952231DBC6700B9AFF9 /* CarRepairTests.swift */,
 				C4392954231DBC6700B9AFF9 /* Info.plist */,
 			);
@@ -410,6 +427,65 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C44551A62322201800958D03 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C44551BE232222E200958D03 /* Mocks */,
+				C44551A72322202C00958D03 /* UseCase */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C44551A72322202C00958D03 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C44551A82322207500958D03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C44551BA2322221400958D03 /* RepairCarResponse+Tests.swift */,
+				C44551BC232222B000958D03 /* CarRepairDetailResponse+Tests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C44551A92322207B00958D03 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C44551AC232220B800958D03 /* MapperHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C44551AA2322208400958D03 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C44551A62322201800958D03 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C44551AB2322209500958D03 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C44551B22322214800958D03 /* places_success.json */,
+				C44551B82322219200958D03 /* detail_success.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C44551BE232222E200958D03 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C44551BF2322230C00958D03 /* GetCarRepairListPresenterSpy.swift */,
+				C44551C12322237200958D03 /* GetCarRepairDetailPresenterSpy.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		C485D7A0232197F200AB30A6 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +588,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44551B92322219200958D03 /* detail_success.json in Resources */,
+				C44551B32322214800958D03 /* places_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,7 +723,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44551AD232220B800958D03 /* MapperHelper.swift in Sources */,
 				C4392953231DBC6700B9AFF9 /* CarRepairTests.swift in Sources */,
+				C44551BB2322221400958D03 /* RepairCarResponse+Tests.swift in Sources */,
+				C44551C22322237200958D03 /* GetCarRepairDetailPresenterSpy.swift in Sources */,
+				C44551BD232222B000958D03 /* CarRepairDetailResponse+Tests.swift in Sources */,
+				C44551C02322230C00958D03 /* GetCarRepairListPresenterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

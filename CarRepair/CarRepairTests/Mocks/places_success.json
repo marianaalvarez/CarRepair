@@ -1,0 +1,957 @@
+
+{
+    "html_attributions": [],
+    "next_page_token": "CrQCIQEAAJS_fRK8EpidKA7jAEl2fnsWHAqCkx6_tPFmy5QxQBQMZ61FXPzWB_iQD6oTyWHvsD_51fJZePmFLw6utmSNTCFzgn3a7uORNrwI8lxZBxlLiY6AhnCF9qSuoV3BERVlzdDlPs011Ap7MCcSGfCJ_WsqCkCbDVTvSMct79oAf6kQNUFoszBUBXyP4B56BwIGNJ6wQMd9Z1s_rRPA3iy3WhQLBF7LLWxLWmK9ZRDU-ZkFx1vPgftU6abeLJkg5eBy3SzCP7GW6Sh2YtiCI5nZdKAyqZpv5P3WJw7PCXu7QEUceVjKK5bOrzxdZbu196lkFyrFQcYeYr5gvp5K68II5E-S7r4plREO8jVFpjjZScIvfJJIPq3Sz1iiN9mFE4MlZOPEg-6e8-ZxlhEe6fZCj3QSECgy1jaZ6wQFrEEftlvwDV4aFHgp9rJ5ALma2NO64Jl9wj5gWMmY",
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.537716,
+                    "lng": -46.64212099999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5364124197085,
+                        "lng": -46.6407263697085
+                    },
+                    "southwest": {
+                        "lat": -23.5391103802915,
+                        "lng": -46.6434243302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "fd10037ea71e4238e5f184e9f40416226db97792",
+            "name": "Moby Sport Motos e Acessorios",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1206,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100169388978955941270/photos\">Moby Sport Motos e Acessorios</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAb28H52pzVLMZnpqfdX75O98vta4Cy6RBe8SkTL1_fMY4t-jVvB5giFRleutKs_5vgu7OrYbBNStEOsQHrlt8TXUqlkiHK9d1tVc6kRkjbXO1vYV9MTmaDEEMCBlqBd2fEhAoSobkIfw-hfyGbh8ICQhrGhTVMpqHDVbYjWB6SwpKnR6cdsxb5g",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJBWymyURYzpQRdKf3S-_Zaps",
+            "plus_code": {
+                "compound_code": "F965+W5 Santa Ifigênia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF965+W5"
+            },
+            "rating": 4.4,
+            "reference": "ChIJBWymyURYzpQRdKf3S-_Zaps",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 190,
+            "vicinity": "Rua General Osório, 406 - Santa Ifigênia, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5386565,
+                    "lng": -46.64290769999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5372340697085,
+                        "lng": -46.6416001197085
+                    },
+                    "southwest": {
+                        "lat": -23.5399320302915,
+                        "lng": -46.6442980802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "565c106833c78992787318a1d791f7ea27b3ce61",
+            "name": "General Motos",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101764033546631902662/photos\">Dorg Maycon</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAgx_f87r8G9hXED4ZyJv75HHw6SC_hpUh6jKENYKE5VFnz-Js3fQaBarrmvbVKJtEi0cKGMG2nh_apN7p3NJh-rwezK8ngjNzrw3aEALHawD0CbN33IJtcjHsK8rRE8EzEhBGsTP9JSv-PKLOcJUX2OH3GhTZ_AHDTYJ86zHQJD714gE6CQ9b5A",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJL64t6URYzpQRjxXCDf_43w0",
+            "plus_code": {
+                "compound_code": "F964+GR Campos Elíseos, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF964+GR"
+            },
+            "rating": 4.3,
+            "reference": "ChIJL64t6URYzpQRjxXCDf_43w0",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 3723,
+            "vicinity": "Rua General Osório, 537 - Campos Elíseos, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5763926,
+                    "lng": -46.62339730000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5750320697085,
+                        "lng": -46.6221197197085
+                    },
+                    "southwest": {
+                        "lat": -23.5777300302915,
+                        "lng": -46.6248176802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "ed3c964a27ad64576c69c3b81fe5caa8f8ccf5a8",
+            "name": "Della Via Pneus - Cambuci",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 480,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101349652462810676267/photos\">Della Via Pneus - Cambuci</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAjC6bbdgq4Fq7YWBpX29RLHhPeuYLc2Z6mDlqBieimm1vRtuvTPNqfb7oV6lvIvINRvnV-fmIJKhBlQKarkBdGPrvl1XcEO2DOgm6KppCw1kQ-GX_uz48kRIdA8_5cBwKEhCWaea5N_i-jdMn2ku4qqnwGhQEmshh4yyC-JCJ87ridNZO-gBNIg",
+                    "width": 640
+                }
+            ],
+            "place_id": "ChIJV6gkPntZzpQRA3x29SOZvLU",
+            "plus_code": {
+                "compound_code": "C9FG+CJ Cambuci, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MC9FG+CJ"
+            },
+            "rating": 3.9,
+            "reference": "ChIJV6gkPntZzpQRA3x29SOZvLU",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 190,
+            "vicinity": "Avenida Lins de Vasconcelos, 1469 - Cambuci, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5386114,
+                    "lng": -46.64143019999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5371974197085,
+                        "lng": -46.64013221970849
+                    },
+                    "southwest": {
+                        "lat": -23.5398953802915,
+                        "lng": -46.64283018029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "5f77d92f9c3c9f3e549acf28584e53b63b5e7386",
+            "name": "Armazem Moto Peças",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2160,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108296381866763185518/photos\">stenio santos</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAhiB1V2LbKFbK0_ib0SxjOHoHyJ-xA1wBshQBYbSWo3ETnDEZJMcUfEHhIXLdtzmQ7wQktYNGZu9A62bsX6pQK0exrFqTjbVCJ8j1u5yW8_moPSoKOTCvy9WXqEQ5CK8sEhCyKyu-ZmdJelAxXPlJB9JZGhSM_l7FWSnDEOAnvSAdZTvtG17ZDA",
+                    "width": 3840
+                }
+            ],
+            "place_id": "ChIJ4fmi1ERYzpQRiOk1K5gGk9c",
+            "plus_code": {
+                "compound_code": "F965+HC Santa Ifigênia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF965+HC"
+            },
+            "rating": 4.2,
+            "reference": "ChIJ4fmi1ERYzpQRiOk1K5gGk9c",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 28,
+            "vicinity": "Rua dos Gusmões, 581 - Santa Ifigênia"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.53216209999999,
+                    "lng": -46.6605205
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5307421197085,
+                        "lng": -46.65917966970849
+                    },
+                    "southwest": {
+                        "lat": -23.5334400802915,
+                        "lng": -46.66187763029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "e8b271b4b579b987eddd5b9125646abef2c209f1",
+            "name": "Motonac Comércio de Motocicletas",
+            "opening_hours": {
+                "open_now": false
+            },
+            "place_id": "ChIJ10sdvBZYzpQRv_9M-7taT_4",
+            "plus_code": {
+                "compound_code": "F89Q+4Q Santa Cecilia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF89Q+4Q"
+            },
+            "rating": 5,
+            "reference": "ChIJ10sdvBZYzpQRv_9M-7taT_4",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 1,
+            "vicinity": "Avenida General Olímpio da Silveira, 435 - Santa Cecilia, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.531063,
+                    "lng": -46.665772
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5296529197085,
+                        "lng": -46.6643412697085
+                    },
+                    "southwest": {
+                        "lat": -23.53235088029151,
+                        "lng": -46.6670392302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "979de115e8553ad08f74126988d98b076542ad4e",
+            "name": "Posto Carmenere",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1920,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111075548598494630037/photos\">aguinaldo pessoa</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATlysliKAn3N_eOxGnarWB0486_G3CHkmLgw7oy1CIGSr2BRk-nP2A9iW524OCtPjUAVgKRN6_yEA-A8U1TuJdwrdrr3QxdW7pXEikzlayLDyI5nY7WOLL0g-NQuN6IJLEhCfr2AIIO7Z52wJnt6WaAvdGhQkT-aE4ZCQpmEKTxuWP2jzARMhSw",
+                    "width": 1080
+                }
+            ],
+            "place_id": "ChIJPV9JqBxYzpQRRIfTt39GTUI",
+            "plus_code": {
+                "compound_code": "F89M+HM Perdizes, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF89M+HM"
+            },
+            "rating": 5,
+            "reference": "ChIJPV9JqBxYzpQRRIfTt39GTUI",
+            "scope": "GOOGLE",
+            "types": [
+                "convenience_store",
+                "gas_station",
+                "car_repair",
+                "food",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 1,
+            "vicinity": "Túnel Francisco Matarazzo, 217 - Perdizes, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5642412,
+                    "lng": -46.6181783
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5628409197085,
+                        "lng": -46.6168033697085
+                    },
+                    "southwest": {
+                        "lat": -23.5655388802915,
+                        "lng": -46.6195013302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "440161e5bf83cfa9ba87a2d5a1bfd2ad1f6d2588",
+            "name": "Evolution Sound",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2340,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107336513654897540784/photos\">Mauricio Barreira</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAkvZzQIlSsChkHNtBl1bmlEJKcZOD7nNkwqzjpd11sFV97WhuPDBarIW81fJh62bCObUqiP5N1WhEDmfNLMTgoI3FXJQyW9yCudhY8Qy0PG9y3ANi2BgvX458zuDtLHQkEhA8qsWqeXMtte8diH09se3qGhTuuRuYK-5488xh9rL-imj0XNzYRg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJ64wiY2xZzpQRfmBPg8Robww",
+            "plus_code": {
+                "compound_code": "C9PJ+8P Cambuci, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MC9PJ+8P"
+            },
+            "rating": 4.1,
+            "reference": "ChIJ64wiY2xZzpQRfmBPg8Robww",
+            "scope": "GOOGLE",
+            "types": [
+                "electronics_store",
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 63,
+            "vicinity": "Rua Clímaco Barbosa, 250 - Cambuci, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5665883,
+                    "lng": -46.6139807
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5652639197085,
+                        "lng": -46.61266071970849
+                    },
+                    "southwest": {
+                        "lat": -23.5679618802915,
+                        "lng": -46.61535868029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "4fc405af3d766ad2f1b6b50047ce037adb70f37f",
+            "name": "2001 Hp Serviços Automotivos LTDA",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111049564142193146005/photos\">EMERSON FERREIRA</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAQSibSKUrvo6GHT-g-A6GooNFiCOe95X6PpY4qmGDxICe7wbRgH_1X4qEk3Tr6uIrRY_HapdCcNtI-X_HO6L-wDpAeMPkv7zzx99tXkpu1lV1Oj88Pz4qP68LQXujfmVfEhDFXusiyuxvOYDjCs1jzdNmGhRadeUZbIg4YO-SvEVQLo4gJVOtWQ",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJ40W4L2hZzpQRPMLDty5hh6w",
+            "plus_code": {
+                "compound_code": "C9MP+9C Cambuci, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MC9MP+9C"
+            },
+            "rating": 4.5,
+            "reference": "ChIJ40W4L2hZzpQRPMLDty5hh6w",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 51,
+            "vicinity": "Rua Clímaco Barbosa, 755 - Cambuci, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5264242,
+                    "lng": -46.6348603
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5250654697085,
+                        "lng": -46.6335477197085
+                    },
+                    "southwest": {
+                        "lat": -23.5277634302915,
+                        "lng": -46.6362456802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "513bbe3a21cc23d9350166420a5f92d6a0311c3a",
+            "name": "MGA Lubrificantes",
+            "opening_hours": {
+                "open_now": false
+            },
+            "place_id": "ChIJ6frtHGFYzpQRb_SJrvljUjU",
+            "plus_code": {
+                "compound_code": "F9F8+C3 Bom Retiro, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF9F8+C3"
+            },
+            "rating": 4.2,
+            "reference": "ChIJ6frtHGFYzpQRb_SJrvljUjU",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 10,
+            "vicinity": "Rua Prates, 874 - Bom Retiro, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.538402,
+                    "lng": -46.642584
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5370012697085,
+                        "lng": -46.6412747197085
+                    },
+                    "southwest": {
+                        "lat": -23.5396992302915,
+                        "lng": -46.6439726802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "6112169bb5f71156dbc9bdc14b4cbbadebe51788",
+            "name": "Wing Motos",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3096,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108863786225250533372/photos\">Diogenes Di</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAXRCpmSWAI5R3wuysYnLqIXuvKNvpiQLakQthX6RNnkv20wl9iZVeUYhwkwVu15dudia_1Mf3-y_bwn6SBRO9MLprd3f2G8X3Uvh0t7MJgicrpwHX96txVLsmrI9WqzheEhBU1vvHPmmS6WWJa-mthPOcGhQB211hD74SSEQc26_S1uqjqu0--Q",
+                    "width": 4128
+                }
+            ],
+            "place_id": "ChIJgbqww0RYzpQRaHZc3HSE8b4",
+            "plus_code": {
+                "compound_code": "F964+JX Santa Ifigênia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF964+JX"
+            },
+            "rating": 4.4,
+            "reference": "ChIJgbqww0RYzpQRaHZc3HSE8b4",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 281,
+            "vicinity": "Rua General Osório, 495, 491 - Santa Ifigênia, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5384154,
+                    "lng": -46.6419832
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5371234697085,
+                        "lng": -46.6407232697085
+                    },
+                    "southwest": {
+                        "lat": -23.5398214302915,
+                        "lng": -46.6434212302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "f2b49a4ada316aa3af0fe0c7d82044c2684a153e",
+            "name": "Cave Motorcycle Parts",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4128,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113571140246559986012/photos\">Marcelo Xavier De Itaquera SP</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAM5z9u2v8oBrh5lbbPAAl7UGht0fj40HtHE_Ogae2XbymNgOP8FZfd2ZSguSxcM_9v1FgUWmDVtVK3wi6Y6oYgRty0cS6riZx7ZJiVt3ksL7ag9HfPot46GS5xBNACsPjEhCg8lSPbCaY75dTAgMHKRPBGhSPg59i9MBBoXAW51mjJsDa3WiLFA",
+                    "width": 2322
+                }
+            ],
+            "place_id": "ChIJy5cT0ERYzpQRavsrO1b6tBo",
+            "plus_code": {
+                "compound_code": "F965+J6 São Paulo, State of São Paulo, Brazil",
+                "global_code": "588MF965+J6"
+            },
+            "rating": 4.1,
+            "reference": "ChIJy5cT0ERYzpQRavsrO1b6tBo",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 114,
+            "vicinity": "Rua Guaianases, 340 - Centro Histórico de São Paulo, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5388825,
+                    "lng": -46.64417809999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5375038697085,
+                        "lng": -46.64278616970849
+                    },
+                    "southwest": {
+                        "lat": -23.5402018302915,
+                        "lng": -46.64548413029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "69bd79b52bf49756afcf1f43a3db22ad7aa86e5b",
+            "name": "Accioly Chevrolet",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 4160,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112194915206163622435/photos\">Tonia Karla schmid</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAgBuqwZCR3Pbnr8ZtdHmeTcJ0k-cBo_T89j1t4Vf_0BDBo7C3R4a3mnrHOIGslXvjSd0sS-T2TNZ0NbYN60rFTCNanr6nFF9Ovyl6pTydFfBPxvUQCAXfl6TapsuUSzB6EhBnF9YMG4mPh-rgqbEODYjxGhTRA6PqIC-UYPBU7cGb3d2e6e6i6g",
+                    "width": 3120
+                }
+            ],
+            "place_id": "ChIJyYQIWURYzpQR4di4XtlnIc0",
+            "plus_code": {
+                "compound_code": "F964+C8 Campos Elíseos, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF964+C8"
+            },
+            "rating": 4.3,
+            "reference": "ChIJyYQIWURYzpQR4di4XtlnIc0",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 1516,
+            "vicinity": "Alameda Barão de Limeira, 191 - Campos Elíseos, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5389545,
+                    "lng": -46.64353319999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5375745697085,
+                        "lng": -46.6422081697085
+                    },
+                    "southwest": {
+                        "lat": -23.5402725302915,
+                        "lng": -46.6449061302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "1d69c92096310915c417e457f6e832796d8eca0e",
+            "name": "Moto Racer",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2340,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118010107830301099237/photos\">Moto, Vento e Estrada</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAQXp_nfiPgxft_GOFhawK6F9fkUC2chXSlFvbUn7O5bhIlWYzOBdmuC6TExnSyOyUJUCymQvRYXS-DrTcoN5eN6gVrlOVhpVnLSHOpltOokUAU_JWxWgEkTSuDthAHSrKEhBJML4SqIiwCb6p7B6EOpp-GhRYJRfmNn0oqsxRoz7Genh8TPVopA",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJnRlI-kRYzpQRr8duX5Vnqgs",
+            "plus_code": {
+                "compound_code": "F964+CH Santa Ifigênia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF964+CH"
+            },
+            "rating": 4.3,
+            "reference": "ChIJnRlI-kRYzpQRr8duX5Vnqgs",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 158,
+            "vicinity": "Rua General Osório, 609/615 - Santa Ifigênia, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5306187,
+                    "lng": -46.6777076
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5292973197085,
+                        "lng": -46.67628171970849
+                    },
+                    "southwest": {
+                        "lat": -23.5319952802915,
+                        "lng": -46.67897968029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "1c1d271559808da338fb7962caa6b1badd26ecb2",
+            "name": "Via della Tires",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1840,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105972668440473989654/photos\">Reinoldes santos</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAXc2WWwVFd_4gIfJ_c1fP98yeIblXwt_aRCjBrpz0Q131h4H1M9EGERQ1DjQJ78GHNBQ1bPQ-tLKVTcOL5uk0tOKS99syaskOye5rVi89ryBCv5n0EHJbsUpK6BKQLeQGEhCCGhIy25C4t1S3WC274GrFGhQFWEMK200ifWRum4mHSR7kQPHr9A",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJe5nomPtXzpQRoIFnfpzK3vY",
+            "plus_code": {
+                "compound_code": "F89C+QW Perdizes, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF89C+QW"
+            },
+            "rating": 3.7,
+            "reference": "ChIJe5nomPtXzpQRoIFnfpzK3vY",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 194,
+            "vicinity": "Avenida Sumaré, 78 - Perdizes, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5552799,
+                    "lng": -46.6512778
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5539557697085,
+                        "lng": -46.64999306970851
+                    },
+                    "southwest": {
+                        "lat": -23.5566537302915,
+                        "lng": -46.65269103029151
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "f063448cad9c8dc6cbcba7b047de1b1c3eff35c9",
+            "name": "Porto Seguro",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1440,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/111634590451803406316/photos\">Bruno Tenório Miachon</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA1mSXUT344P9X309Zeue4LLXnlzx_3xeWtNtWYyQ6qQ6mRVnQnqcntC2fh35HobFv5WZhtHdH73e2lvfLXstlwkRi8G1haZ1KYF5Ovubqpi2l_UNKM6y4cOKW5HsmYWAPEhCe5qCcgErRMmMv7GEOp6cPGhT8gT326_99c6fE629VeNjDAdxEeQ",
+                    "width": 2560
+                }
+            ],
+            "place_id": "ChIJb5keTzVYzpQRm0ED66PWOQ0",
+            "plus_code": {
+                "compound_code": "C8VX+VF Bela Vista, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MC8VX+VF"
+            },
+            "rating": 4.4,
+            "reference": "ChIJb5keTzVYzpQRm0ED66PWOQ0",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "insurance_agency",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 154,
+            "vicinity": "Rua Doutor Penaforte Mendes, 74 - Bela Vista, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5378393,
+                    "lng": -46.63946
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5365249697085,
+                        "lng": -46.6381682697085
+                    },
+                    "southwest": {
+                        "lat": -23.5392229302915,
+                        "lng": -46.6408662302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "ea75c262b35fc0da86519dad5a5f3ffd5dadc4ce",
+            "name": "CS SOM SOM AUTOMOTIVO",
+            "opening_hours": {
+                "open_now": false
+            },
+            "place_id": "ChIJM-vkA1tYzpQRgM9EKt8z5lc",
+            "plus_code": {
+                "compound_code": "F966+V6 Santa Ifigênia, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF966+V6"
+            },
+            "rating": 2.7,
+            "reference": "ChIJM-vkA1tYzpQRgM9EKt8z5lc",
+            "scope": "GOOGLE",
+            "types": [
+                "electronics_store",
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 7,
+            "vicinity": "Rua Santa Ifigênia, 480 - Loja 36/37 - Santa Ifigênia, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5258948,
+                    "lng": -46.6380242
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.52451396970849,
+                        "lng": -46.63669211970849
+                    },
+                    "southwest": {
+                        "lat": -23.5272119302915,
+                        "lng": -46.63939008029149
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/shopping-71.png",
+            "id": "a010318efe5f19cf0dbf45ddcf8aa639b6f63c66",
+            "name": "Luiz Santoro Moto Parts",
+            "place_id": "ChIJh0oTn2ZYzpQRMo9kjNgqo5c",
+            "plus_code": {
+                "compound_code": "F9F6+JQ São Paulo, State of São Paulo, Brazil",
+                "global_code": "588MF9F6+JQ"
+            },
+            "rating": 4.5,
+            "reference": "ChIJh0oTn2ZYzpQRMo9kjNgqo5c",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 4,
+            "vicinity": "Rua Júlio Conceição, 155 - Bom Retiro, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5281207,
+                    "lng": -46.6606309
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.52676861970849,
+                        "lng": -46.6594170197085
+                    },
+                    "southwest": {
+                        "lat": -23.5294665802915,
+                        "lng": -46.6621149802915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "25663b717789ceec8e55032dbf5badcb7deb29b2",
+            "name": "Centro Automotivo Porto Seguro",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2831,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104325055262752431614/photos\">Centro Automotivo Porto Seguro</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAAUMKwuOrtjHHoSKt0LbBPEfYWvszxS00Xs1jQkGtAa5aDMWabIYjc4Dr5R68eZEXSlSzfJFMVV737sJfAISiE4nXb72m1kKFt1YN6F3633YPJS-qM7E5FySWLb2E1xoQEhDd-Kco4IlPSlFEGsE-Qf8HGhRZT6IFP_ls1VFD1DFEJwoodOnCcA",
+                    "width": 4700
+                }
+            ],
+            "place_id": "ChIJfX5a9g9YzpQRv3fyG9bAakY",
+            "plus_code": {
+                "compound_code": "F8CQ+QP Barra Funda, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MF8CQ+QP"
+            },
+            "rating": 4.4,
+            "reference": "ChIJfX5a9g9YzpQRv3fyG9bAakY",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "store",
+                "establishment"
+            ],
+            "user_ratings_total": 323,
+            "vicinity": "Avenida Pacaembu, 35 - Barra Funda, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5289265,
+                    "lng": -46.6626583
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.5275553197085,
+                        "lng": -46.6613341697085
+                    },
+                    "southwest": {
+                        "lat": -23.5302532802915,
+                        "lng": -46.6640321302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "41c45845e776b5550e8e60a7ec7f0e0f20f801a5",
+            "name": "Caltabiano Land Rover Oficina",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3006,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114130028189647624618/photos\">Dalmo Ricco</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAmDe2qz9NrDRPEkr3xhfTaA_waZa_jBmi1sQrWgcYxYKA-vfEPPNGP1EQo_K1PNtOHQcW0GECZv5pC4SAQN4i6KaopYPALrrgNBLt8IB8XsNGOzZoEdeKZzaahjnGK2vYEhCFuh8XszEQ_9W_q-7dC8fZGhQI1zhb34wfdw19wXeI6p-He3xXXA",
+                    "width": 5344
+                }
+            ],
+            "place_id": "ChIJMdRbMAVYzpQRWzLXyj-5TPg",
+            "plus_code": {
+                "compound_code": "F8CP+CW São Paulo, State of São Paulo, Brazil",
+                "global_code": "588MF8CP+CW"
+            },
+            "rating": 5,
+            "reference": "ChIJMdRbMAVYzpQRWzLXyj-5TPg",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2,
+            "vicinity": "Alameda Olga, 259 - Barra Funda, São Paulo"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": -23.5790717,
+                    "lng": -46.6706277
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": -23.57773771970849,
+                        "lng": -46.6693777697085
+                    },
+                    "southwest": {
+                        "lat": -23.5804356802915,
+                        "lng": -46.6720757302915
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "1636ef0a9a6e48fa334e07bc4c91b091f48dfa43",
+            "name": "Kobata Auto Mecânica",
+            "opening_hours": {
+                "open_now": false
+            },
+            "place_id": "ChIJM4hOHeBZzpQRgyaHhdqsLjM",
+            "plus_code": {
+                "compound_code": "C8CH+9P Jardins, São Paulo - State of São Paulo, Brazil",
+                "global_code": "588MC8CH+9P"
+            },
+            "rating": 3.8,
+            "reference": "ChIJM4hOHeBZzpQRgyaHhdqsLjM",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 18,
+            "vicinity": "Avenida São Gabriel, 472 - Jardins, São Paulo"
+        }
+    ],
+    "status": "OK"
+}

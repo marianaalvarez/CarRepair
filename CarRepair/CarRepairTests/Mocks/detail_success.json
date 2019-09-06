@@ -1,0 +1,311 @@
+{
+    "html_attributions": [],
+    "result": {
+        "address_components": [
+            {
+                "long_name": "80",
+                "short_name": "80",
+                "types": [
+                    "street_number"
+                ]
+            },
+            {
+                "long_name": "Rua Maicuru",
+                "short_name": "R. Maicuru",
+                "types": [
+                    "route"
+                ]
+            },
+            {
+                "long_name": "Indianópolis",
+                "short_name": "Indianópolis",
+                "types": [
+                    "sublocality_level_1",
+                    "sublocality",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "São Paulo",
+                "short_name": "São Paulo",
+                "types": [
+                    "administrative_area_level_2",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "São Paulo",
+                "short_name": "SP",
+                "types": [
+                    "administrative_area_level_1",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "Brazil",
+                "short_name": "BR",
+                "types": [
+                    "country",
+                    "political"
+                ]
+            },
+            {
+                "long_name": "04084-010",
+                "short_name": "04084-010",
+                "types": [
+                    "postal_code"
+                ]
+            }
+        ],
+        "adr_address": "<span class=\"street-address\">R. Maicuru, 80</span> - <span class=\"extended-address\">Indianópolis</span>, <span class=\"locality\">São Paulo</span> - <span class=\"region\">SP</span>, <span class=\"postal-code\">04084-010</span>, <span class=\"country-name\">Brazil</span>",
+        "formatted_address": "R. Maicuru, 80 - Indianópolis, São Paulo - SP, 04084-010, Brazil",
+        "formatted_phone_number": "(11) 5096-2227",
+        "geometry": {
+            "location": {
+                "lat": -23.6108222,
+                "lng": -46.6649346
+            },
+            "viewport": {
+                "northeast": {
+                    "lat": -23.60945196970849,
+                    "lng": -46.6636130697085
+                },
+                "southwest": {
+                    "lat": -23.6121499302915,
+                    "lng": -46.6663110302915
+                }
+            }
+        },
+        "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "68eacbe38c43e1a810924ec37f27767d3c20ae91",
+        "international_phone_number": "+55 11 5096-2227",
+        "name": "Oficina e Peças Nova Suzuki",
+        "opening_hours": {
+            "open_now": false,
+            "periods": [
+                {
+                    "close": {
+                        "day": 1,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "day": 1,
+                        "time": "0800"
+                    }
+                },
+                {
+                    "close": {
+                        "day": 2,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "day": 2,
+                        "time": "0800"
+                    }
+                },
+                {
+                    "close": {
+                        "day": 3,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "day": 3,
+                        "time": "0800"
+                    }
+                },
+                {
+                    "close": {
+                        "day": 4,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "day": 4,
+                        "time": "0800"
+                    }
+                },
+                {
+                    "close": {
+                        "day": 5,
+                        "time": "1800"
+                    },
+                    "open": {
+                        "day": 5,
+                        "time": "0800"
+                    }
+                },
+                {
+                    "close": {
+                        "day": 6,
+                        "time": "1300"
+                    },
+                    "open": {
+                        "day": 6,
+                        "time": "0800"
+                    }
+                }
+            ],
+            "weekday_text": [
+                "Monday: 8:00 AM – 6:00 PM",
+                "Tuesday: 8:00 AM – 6:00 PM",
+                "Wednesday: 8:00 AM – 6:00 PM",
+                "Thursday: 8:00 AM – 6:00 PM",
+                "Friday: 8:00 AM – 6:00 PM",
+                "Saturday: 8:00 AM – 1:00 PM",
+                "Sunday: Closed"
+            ]
+        },
+        "photos": [
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAAbjEfzBR1OK6Nd9fjwwuc8zc3Ezc02AApL9yvIqWKsmXhqMKpSWLKhL3VQo3xgC5mvP4XECADIDp5Q_mjwNTPfkvNpp-ndFRHFPsJFY8FQitSBAFnEDQe3hjzUC4vnDQIEhBwCDR4PwNEjusoZ8P8K6FVGhRihy6U5WnNvGqVS4R2q0lX8ll97Q",
+                "width": 1000
+            },
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAAkadiUcwYluBjFYR8eQcMlCvPnN6DOOf1R5RSOQdsd-7P70d1TgLlarYNua_hIYnzX0q-z6E_9WTwtLBoet7OSM37H8RD8mxhqRAqcmJ3iY4XWL_2lLnW448rj9ER-f06EhB08hOs3fiRnxmPewanWRsRGhSY7k5S1IPrYV_R23128RXl74GgUQ",
+                "width": 1000
+            },
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAADKJ8hOtx-IHLhm5KUhqI1cEdK9QCDhJI-UYPm1db4_ZxI4OoEE20Rr7r4QgWRy7EVj2QueKDAZSI1IgRXymALK8Eu199fin7WZXbuOtFru54qQM_UFeFwuTFFZn6cbalEhCBluQVvPBliGIXhy6iqLTpGhTA5H0MqZRiRqEhgC-m3oOYaiwewA",
+                "width": 1000
+            },
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAAE2zj9z5XE31db-qpVDYKJz5b7Vo0YGI2HpvZuwKcBlDITbyBmE6Kw2-72t9d3U1FZuNCcV3r7meS8REOEowPaRVhBl5xnH08cQ0L_wFX7ncZXzk9iXKdbG78K2kxaUJPEhDVMMmLH-15eVcJPHozXrIvGhQcegLjlyQOEUyios01cuM9tsi6Gw",
+                "width": 1000
+            },
+            {
+                "height": 2322,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/113145064227786433230/photos\">Moto Socorro em Ação</a>"
+                ],
+                "photo_reference": "CmRaAAAAiM7TMLyZpmY8nzjJ24IREaIgDJfEwf_0WYmC0rRpqZFboJm4KSBOCQRN-W2CyUqlbFlf_--5YVITibZHR4RKJD5HhmnZ116-z4tPgCS9Jw7cL9oQqjzRYG7C1c5zRafbEhA1QOu104vK38NzE8wmNYRhGhQ4TLwd_NW9zx8T7bnEVyl1_NZnOA",
+                "width": 4128
+            },
+            {
+                "height": 635,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAALz-h8HMq6zukWOmHCK_zK2lS45lGHSR2ffnGAeH2rlD0PMNgdS-UR-Wt9ZAZFxhiPYWkW5-DUE3YZRXBdwLZY8_Bre1o4XheXF3M7NwrcTxYsr1qiIwu1HOCOQj-3EGQEhB2UWZFDqTnTQKxzPDHojl1GhT2xBRr8xo2OzcBsl0F8vHJHa93BA",
+                "width": 960
+            },
+            {
+                "height": 635,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAAe47uZo3M0Bb8ZTQbQM3q1HU14Iz45n_3-A44kxwk1hslV-Tqv7AdyL1i8-RgErWiP86bV8g0m_onsPCj3uKJeiZaZn8vy2ApXiexR7HaLDxnzqnUNZaGEcFpGTyPOsVGEhA3DMwzJWPRuj9MgZbK6vOqGhTUOW6BdTIbx--vmS9CU03dw4NlkQ",
+                "width": 960
+            },
+            {
+                "height": 635,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAAKGk40RDI579WT2bKTL7PlPexQZTQArjX3rP5fAiQvt0Xe6Js854IapjsuijfwxHwxt5YDW1GeM3Sp7I5Kgtt5Z_yWi5h2D6I4tIiD3CSb2YFjaHw1EK2RAviMl-PbwmSEhDUCMSXc-fmyJzj-iHsyVHMGhRfHzCMcdOPECMb-qSfWo3qBaXHlA",
+                "width": 960
+            },
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAALeN0F5d2GUT83AQQczSQ_KqG-S4tKeRSNqikzHnqGTDrDqWcUv-RvAijEqkVvkrdW9V3SLorfnQFDZIrUPwRT6_MlPWC6cxve3J0p_JomvCj8hstasvYMofuL0KpLknHEhDznsruZ0t4Mb6rB2XLOcDYGhRV3lhBMiVgYcW2nXO8kofZi5oDUg",
+                "width": 1000
+            },
+            {
+                "height": 667,
+                "html_attributions": [
+                    "<a href=\"https://maps.google.com/maps/contrib/104678950713092197748/photos\">Oficina e Peças Nova Suzuki</a>"
+                ],
+                "photo_reference": "CmRaAAAADVUfAj_hUgFh_WwLHwz1eiR3e5MvL_f1IHCCBqpUkcb-HmoiSxugd-71JTuwvQlKIzUA2-iUmMOWlWDJarfXqULBtRTBPu-wKtTkKOqNRH-9gmOhnSnEaQt0mdTMrLIxEhDh5VyVpKOfKL2zoRJ9y6lyGhRMG67cSbQTM3zjJdBNeGu9lFfj4A",
+                "width": 1000
+            }
+        ],
+        "place_id": "ChIJG2GCqQ5azpQRBiBpTWTPZ4M",
+        "plus_code": {
+            "compound_code": "98QP+M2 Indianópolis, São Paulo - State of São Paulo, Brazil",
+            "global_code": "588M98QP+M2"
+        },
+        "rating": 4.1,
+        "reference": "ChIJG2GCqQ5azpQRBiBpTWTPZ4M",
+        "reviews": [
+            {
+                "author_name": "Cristiano William",
+                "author_url": "https://www.google.com/maps/contrib/101145006332562967790/reviews",
+                "language": "pt",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AAuE7mC4C8vYsWxGLxaEI7wHqjRZVVPUIK9frJ4duFiE=s128-c0x00000000-cc-rp-mo-ba4",
+                "rating": 5,
+                "relative_time_description": "3 weeks ago",
+                "text": "Muito bom\nSempre fui bem atendido\nServiços rapidos",
+                "time": 1565370201
+            },
+            {
+                "author_name": "G BA",
+                "author_url": "https://www.google.com/maps/contrib/100363990095125987827/reviews",
+                "language": "pt",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AAuE7mAMrBJuxff2rlSn7DHetMGY0CxWmtth-eBjabU1rw=s128-c0x00000000-cc-rp-mo",
+                "rating": 4,
+                "relative_time_description": "5 months ago",
+                "text": "Bom atendimento. Tentaram resolver o meu problema, que era fora do normal, e me deram muita atenção mesmo eu não sendo cliente habitual.",
+                "time": 1553803543
+            },
+            {
+                "author_name": "Claudio Suzuki",
+                "author_url": "https://www.google.com/maps/contrib/105412461258151051488/reviews",
+                "language": "pt",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AAuE7mBYViVmHXKoQcNyCbCqkUb3SF7YhyWKBU_3yPFh=s128-c0x00000000-cc-rp-mo",
+                "rating": 5,
+                "relative_time_description": "6 months ago",
+                "text": "Adorei a GSX-R 1000F que máquina... parece que você está em um avião",
+                "time": 1550774593
+            },
+            {
+                "author_name": "Agnaldo Agnaldo",
+                "author_url": "https://www.google.com/maps/contrib/106547064839691764534/reviews",
+                "language": "pt",
+                "profile_photo_url": "https://lh3.googleusercontent.com/-kAqzpT6j5Fc/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rfOHJkp3ss9scwDEgOXlEbwYfj34w/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                "rating": 4,
+                "relative_time_description": "2 weeks ago",
+                "text": "Muito.   Atendimento.     Bom",
+                "time": 1565903822
+            },
+            {
+                "author_name": "Alvaro Carvalho",
+                "author_url": "https://www.google.com/maps/contrib/101483520011713488668/reviews",
+                "language": "pt",
+                "profile_photo_url": "https://lh3.googleusercontent.com/a-/AAuE7mD9r1eG-Wnbcf8OopzrmsxHIrNBl5rD6XXGzzcV4A=s128-c0x00000000-cc-rp-mo-ba4",
+                "rating": 4,
+                "relative_time_description": "4 months ago",
+                "text": "Boa loja. Bem organizada!!!",
+                "time": 1555500905
+            }
+        ],
+        "scope": "GOOGLE",
+        "types": [
+            "car_repair",
+            "point_of_interest",
+            "establishment"
+        ],
+        "url": "https://maps.google.com/?cid=9468764771272171526",
+        "user_ratings_total": 66,
+        "utc_offset": -180,
+        "vicinity": "Rua Maicuru, 80 - Indianópolis, São Paulo",
+        "website": "http://www2.novasuzuki.com.br/oficina/"
+    },
+    "status": "OK"
+}
