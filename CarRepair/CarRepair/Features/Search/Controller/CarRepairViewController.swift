@@ -9,9 +9,8 @@
 import UIKit
 import CoreLocation
 
-class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate,
-CLLocationManagerDelegate, RequestLocationErrorPresenter {
-
+final class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate,
+CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateViewDelegate {
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,16 +21,61 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
         return collectionView
     }()
 
-    private let errorStateView: UIView = UIView()
+    private let errorStateView: CarRepairEmptyStateView = {
+        let view = CarRepairEmptyStateViewFactory.makeForError()
+        view.accessibilityIdentifier = "car_repair_error"
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
+
+    private let emptyStateView: CarRepairEmptyStateView = {
+        let view = CarRepairEmptyStateViewFactory.makeForEmptyState()
+        view.accessibilityIdentifier = "car_repair_empty_state"
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+
+    }()
+
+    private let locationErrorView: CarRepairEmptyStateView = {
+        let view = CarRepairEmptyStateViewFactory.makeForLocationError()
+        view.accessibilityIdentifier = "car_repair_location_error"
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
+
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
 
-    private var getCarRepairListUseCase: GetCarRepairListUseCase?
-
     private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView, delegate: self)
+    private lazy var requestLocationUseCase = RequestLocationUseCase(presenter: self)
 
+    private var getCarRepairListUseCase: GetCarRepairListUseCase?
     private var carRepairAPI: CarRepairAPIProtocol
 
-    private lazy var useCase = RequestLocationUseCase(presenter: self)
+    private var viewsToHideOnLoading: [UIView] {
+        return [errorStateView, emptyStateView, locationErrorView, collectionView]
+    }
+
+    private var viewsToHideOnShow: [UIView] {
+        return [errorStateView, emptyStateView, locationErrorView]
+    }
+
+    private var viewsToHideOnError: [UIView] {
+        return [collectionView, emptyStateView, locationErrorView]
+    }
+
+    private var viewsToHideOnEmptyState: [UIView] {
+        return [collectionView, errorStateView, locationErrorView]
+    }
+
+    private var viewsToHideOnLocationError: [UIView] {
+        return [collectionView, errorStateView, emptyStateView]
+    }
 
     // MARK: Initializer
 
@@ -51,7 +95,6 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
         super.loadView()
 
         setupLayout()
-        errorStateView.isHidden = true
     }
 
     // MARK: Lifecycle
@@ -60,7 +103,8 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
         super.viewDidLoad()
 
         setupView()
-        setupUseCase()
+        setupDelegates()
+        requestLocation()
     }
 
     // MARK: Private functions
@@ -70,8 +114,13 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
         view.backgroundColor = .whiteSmoke
     }
 
-    private func setupUseCase() {
-        useCase.run()
+    private func setupDelegates() {
+        errorStateView.delegate = self
+        locationErrorView.delegate = self
+    }
+
+    private func requestLocation() {
+        requestLocationUseCase.run()
     }
 
     private func getCarRepair(location: [String]) {
@@ -81,11 +130,12 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
     }
 
     private func setupLayout() {
-        errorStateView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
 
         view.addSubview(equalConstraintsFor: collectionView)
         view.addSubview(equalConstraintsFor: errorStateView)
+        view.addSubview(equalConstraintsFor: emptyStateView)
+        view.addSubview(equalConstraintsFor: locationErrorView)
 
         view.addSubview(activityIndicator, constraints: [
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -95,12 +145,14 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
 
     private func showLoading() {
         activityIndicator.startAnimating()
-        collectionView.isHidden = true
-        errorStateView.isHidden = true
+        hide(views: viewsToHideOnLoading)
     }
 
     private func removeLoading() {
         activityIndicator.stopAnimating()
+    }
+    private func hide(views: [UIView]) {
+        views.first(where: { view in !view.isHidden})?.isHidden = true
     }
 
     // MARK: GetCarRepairListPresenter conforms
@@ -111,13 +163,13 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
 
         removeLoading()
         collectionView.isHidden = false
-        errorStateView.isHidden = true
+        hide(views: viewsToHideOnShow)
     }
 
     func showError(message: String) {
         removeLoading()
-        collectionView.isHidden = true
         errorStateView.isHidden = false
+        hide(views: viewsToHideOnError)
     }
 
     // MARK: Conforms to CarRepairDataProviderDelegate
@@ -130,7 +182,8 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
     // MARK: RequestLocationErrorPresenter conforms
 
     func showLocationError() {
-        print("Location error")
+        locationErrorView.isHidden = false
+        hide(views: viewsToHideOnLocationError)
     }
 
     // MARK: CLLocationManagerDelegate conforms
@@ -147,6 +200,12 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         showLocationError()
+    }
+
+    // MARK: PlaylistErrorStateViewDelegate conforms
+
+    func retry() {
+        requestLocation()
     }
 }
 
