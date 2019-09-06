@@ -16,9 +16,9 @@ final class GetCarRepairPhotoUseCase: Interactor {
     // MARK: Initializer
 
     init(photo: Photo?, presenter: GetCarRepairPhotoPresenter, carRepairAPI: CarRepairAPIProtocol) {
+        self.photo = photo
         self.presenter = presenter
         self.carRepairAPI = carRepairAPI
-        self.photo = photo
     }
 
     // MARK: Interactor conforms
@@ -35,7 +35,7 @@ final class GetCarRepairPhotoUseCase: Interactor {
                 case .success(let response):
                     self.presenter.show(photo: response)
                 case .failure(_):
-                    self.presenter.showEmptyState()
+                    break
                 }
             }
         }

@@ -175,10 +175,6 @@ final class CarRepairView: UIView, GetCarRepairPhotoPresenter {
         }
     }
 
-    func showEmptyState() {
-
-    }
-
     func show(cachedImage: UIImage) {
         imageView.image = cachedImage
     }

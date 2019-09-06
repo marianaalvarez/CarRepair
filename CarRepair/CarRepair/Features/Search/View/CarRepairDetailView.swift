@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CarRepairDetailView: UIView {
+final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +74,7 @@ final class CarRepairDetailView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14)
         label.textColor = .darkGrey
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -110,11 +110,22 @@ final class CarRepairDetailView: UIView {
         return imageView
     }()
 
-    private let viewModel: CarRepairViewModel
+    private let websiteLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 14)
+        label.textColor = .darkGrey
+        label.numberOfLines = 1
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+
+    private let viewModel: CarRepairDetailViewModel
 
     // MARK: Initializers
 
-    init(viewModel: CarRepairViewModel) {
+    init(viewModel: CarRepairDetailViewModel) {
         self.viewModel = viewModel
 
         super.init(frame: .zero)
@@ -139,6 +150,8 @@ final class CarRepairDetailView: UIView {
     private func setupLabels() {
         nameLabel.text = viewModel.name
         addressLabel.text = viewModel.address
+        phoneNumberLabel.text = viewModel.phoneNumber
+        websiteLabel.text = viewModel.webSite
         ratingLabel.text = viewModel.rating
         openingHourLabel.text = viewModel.openNow
     }
@@ -178,41 +191,56 @@ final class CarRepairDetailView: UIView {
         addSubview(pinIcon, constraints: [
             pinIcon.topAnchor.constraint(equalTo: openingHourLabel.bottomAnchor, constant: 24),
             pinIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            pinIcon.heightAnchor.constraint(equalToConstant: 12),
-            pinIcon.widthAnchor.constraint(equalToConstant: 12)
+            pinIcon.heightAnchor.constraint(equalToConstant: 14),
+            pinIcon.widthAnchor.constraint(equalToConstant: 14)
         ])
 
         addSubview(addressLabel, constraints: [
-            addressLabel.leadingAnchor.constraint(equalTo: pinIcon.leadingAnchor, constant: 8),
-            addressLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            addressLabel.centerYAnchor.constraint(equalTo: pinIcon.centerYAnchor)
+            addressLabel.leadingAnchor.constraint(equalTo: pinIcon.trailingAnchor, constant: 8),
+            addressLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8),
+            addressLabel.topAnchor.constraint(equalTo: pinIcon.topAnchor, constant: -1)
+        ])
+
+        addSubview(phoneNumberLabel, constraints: [
+            phoneNumberLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 16),
+            phoneNumberLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8),
         ])
 
         addSubview(phoneIcon, constraints: [
-            phoneIcon.topAnchor.constraint(equalTo: pinIcon.bottomAnchor, constant: 16),
             phoneIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            phoneIcon.heightAnchor.constraint(equalToConstant: 12),
-            phoneIcon.widthAnchor.constraint(equalToConstant: 12)
+            phoneIcon.heightAnchor.constraint(equalToConstant: 14),
+            phoneIcon.widthAnchor.constraint(equalToConstant: 14),
+            phoneIcon.centerYAnchor.constraint(equalTo: phoneNumberLabel.centerYAnchor)
         ])
 
-        addSubview(phoneNumberLabel, constraints: [
-            phoneNumberLabel.leadingAnchor.constraint(equalTo: phoneIcon.leadingAnchor, constant: 8),
-            phoneNumberLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            phoneNumberLabel.centerYAnchor.constraint(equalTo: phoneIcon.centerYAnchor)
+        phoneNumberLabel.leadingAnchor.constraint(equalTo: phoneIcon.trailingAnchor, constant: 8).isActive = true
+
+        addSubview(websiteLabel, constraints: [
+            websiteLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 16),
+            websiteLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8)
         ])
 
         addSubview(webIcon, constraints: [
-            webIcon.topAnchor.constraint(equalTo: phoneIcon.bottomAnchor, constant: 16),
             webIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            webIcon.heightAnchor.constraint(equalToConstant: 12),
-            webIcon.widthAnchor.constraint(equalToConstant: 12)
+            webIcon.heightAnchor.constraint(equalToConstant: 16),
+            webIcon.widthAnchor.constraint(equalToConstant: 16),
+            webIcon.centerYAnchor.constraint(equalTo: websiteLabel.centerYAnchor)
         ])
 
-        addSubview(phoneNumberLabel, constraints: [
-            phoneNumberLabel.leadingAnchor.constraint(equalTo: webIcon.leadingAnchor, constant: 8),
-            phoneNumberLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            phoneNumberLabel.centerYAnchor.constraint(equalTo: webIcon.centerYAnchor)
-        ])
+        websiteLabel.leadingAnchor.constraint(equalTo: webIcon.trailingAnchor, constant: 8).isActive = true
     }
+
+    // MARK: GetCarRepairPhotoPresenter conforms
+
+    func show(photo: Data) {
+        if let photoId = viewModel.photos?[0].photoReference {
+            imageView.imageFrom(data: photo, photoId: photoId, placeHolder: UIImage())
+        }
+    }
+    
+    func show(cachedImage: UIImage) {
+        imageView.image = cachedImage
+    }
+    
 }
 

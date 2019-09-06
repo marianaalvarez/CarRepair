@@ -9,6 +9,7 @@
 import UIKit
 
 final class CarRepairDetailViewController: UIViewController, GetCarRepairDetailPresenter {
+    private var carRepairDetailView: CarRepairDetailView?
     private let errorStateView: UIView = UIView()
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
 
@@ -73,6 +74,19 @@ final class CarRepairDetailViewController: UIViewController, GetCarRepairDetailP
         ])
     }
 
+    private func setupDetailViewLayout() {
+        if let detailView = carRepairDetailView {
+            detailView.translatesAutoresizingMaskIntoConstraints = false
+
+            view.addSubview(detailView, constraints: [
+                detailView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor),
+                detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        }
+    }
+
     private func showLoading() {
         activityIndicator.startAnimating()
         errorStateView.isHidden = true
@@ -85,12 +99,17 @@ final class CarRepairDetailViewController: UIViewController, GetCarRepairDetailP
     // MARK: GetCarRepairDetailPresenter conforms
 
     func show(carRepair: CarRepairDetail) {
+        let viewModel = CarRepairDetailViewModel(carRepair: carRepair)
+        carRepairDetailView = CarRepairDetailViewFactory.make(with: viewModel)
+        setupDetailViewLayout()
         removeLoading()
+        carRepairDetailView?.isHidden = false
         errorStateView.isHidden = true
     }
 
     func showError(message: String) {
         removeLoading()
+        carRepairDetailView?.isHidden = true
         errorStateView.isHidden = false
     }
 }

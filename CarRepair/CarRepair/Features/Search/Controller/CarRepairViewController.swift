@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
+class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate {
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +26,7 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
         return GetCarRepairListUseCase(presenter: self, carRepairAPI: carRepairAPI)
     }()
 
-    private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView)
+    private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView, delegate: self)
 
     private var carRepairAPI: CarRepairAPIProtocol
 
@@ -109,6 +109,13 @@ class CarRepairViewController: UIViewController, GetCarRepairListPresenter {
         removeLoading()
         collectionView.isHidden = true
         errorStateView.isHidden = false
+    }
+
+    // MARK: Conforms to CarRepairDataProviderDelegate
+
+    func show(carRepair: CarRepair) {
+        let viewController = CarRepairDetaiViewlControllerFactory.make(with: carRepair.id)
+        self.navigationController?.show(viewController, sender: nil)
     }
 }
 

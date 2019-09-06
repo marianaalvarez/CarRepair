@@ -10,7 +10,7 @@ struct CarRepairDetailViewModel {
     let name: String
     let rating: String
     let address: String
-    let isOpen: Bool?
+    let isOpen: Bool
     let phoneNumber: String
     let webSite: String
     var openNow: String

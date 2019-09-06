@@ -11,6 +11,5 @@ import UIKit
 
 protocol GetCarRepairPhotoPresenter: class {
     func show(photo: Data)
-    func showEmptyState()
     func show(cachedImage: UIImage)
 }

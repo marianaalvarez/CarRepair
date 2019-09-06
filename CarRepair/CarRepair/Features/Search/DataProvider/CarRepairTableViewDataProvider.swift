@@ -23,11 +23,14 @@ final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource
         return UIEdgeInsets(top: 0, left: horizontalInset, bottom: 0, right: horizontalInset)
     }()
 
+    weak var delegate: CarRepairDataProviderDelegate?
+
 
     // MARK: Initializer
 
-    init(collectionView: UICollectionView) {
+    init(collectionView: UICollectionView, delegate: CarRepairDataProviderDelegate) {
         self.collectionView = collectionView
+        self.delegate = delegate
 
         super.init()
 
@@ -68,6 +71,15 @@ final class CarRepairTableViewDataProvider: NSObject, UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carRepairList.count
+    }
+
+    // MARK: UICollectionViewDelegate conforms
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let delegate = delegate {
+            let item = carRepairList[indexPath.row]
+            delegate.show(carRepair: item)
+        }
     }
 
     // MARK: UICollectionViewDelegateFlowLayout conforms

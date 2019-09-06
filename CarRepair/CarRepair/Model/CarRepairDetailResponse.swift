@@ -13,7 +13,7 @@ struct CarRepairDetailReponse: Codable {
     let status: String
 
     enum CodingKeys: String, CodingKey {
-        case carRepair = "results"
+        case carRepair = "result"
         case status
     }
 }
