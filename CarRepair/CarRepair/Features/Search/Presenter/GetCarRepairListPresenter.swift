@@ -8,5 +8,6 @@
 
 protocol GetCarRepairListPresenter: class {
     func showCarRepair(list: [CarRepair])
+    func showEmptyState()
     func showError(message: String)
 }

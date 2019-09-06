@@ -17,7 +17,7 @@ final class CarRepairEmptyStateView: UIView {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textColor = .darkGrey
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -57,7 +57,6 @@ final class CarRepairEmptyStateView: UIView {
 
         setupLayout()
         setupView()
-        setupAccessibility()
     }
 
     required init?(coder aDecoder: NSCoder) {

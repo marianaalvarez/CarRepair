@@ -19,7 +19,7 @@ final class CarRepairEmptyStateViewFactory {
     }
 
     static func makeForLocationError() -> CarRepairEmptyStateView {
-        let view = CarRepairEmptyStateView(message: "You need to change your location settings \nto get the best venues around you")
+        let view = CarRepairEmptyStateView(message: "You need to change your location settings to get the best venues around you")
         view.addButton()
 
         return view

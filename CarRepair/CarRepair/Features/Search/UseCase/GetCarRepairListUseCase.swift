@@ -23,7 +23,11 @@ final class GetCarRepairListUseCase: Interactor {
         carRepairAPI.getCarRepairList(location: location) { result in
             switch result {
             case .success(let response):
-                self.presenter.showCarRepair(list: response.carRepairList)
+                if response.carRepairList.count > 0 {
+                    self.presenter.showCarRepair(list: response.carRepairList)
+                } else {
+                    self.presenter.showEmptyState()
+                }
             case .failure(let message):
                 self.presenter.showError(message: message)
 
