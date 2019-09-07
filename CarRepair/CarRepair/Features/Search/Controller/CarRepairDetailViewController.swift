@@ -10,7 +10,7 @@ import UIKit
 
 final class CarRepairDetailViewController: UIViewController, GetCarRepairDetailPresenter {
     private var carRepairDetailView: CarRepairDetailView?
-    private let errorStateView: UIView = UIView()
+    private let errorStateView: CarRepairEmptyStateView = CarRepairEmptyStateViewFactory.makeForError()
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
 
     private lazy var getCarRepairDetailUseCase: Interactor = {
