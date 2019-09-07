@@ -11,7 +11,6 @@ import CoreLocation
 
 final class CarRepairViewController: UIViewController, GetCarRepairListPresenter, CarRepairDataProviderDelegate,
 CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateViewDelegate {
-
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -126,7 +125,6 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
     }
 
     private func getCarRepair(location: [String]) {
-        hide(views: viewsToHideOnLoading)
         showLoading()
         getCarRepairListUseCase = GetCarRepairListUseCase(location: location, presenter: self, carRepairAPI: carRepairAPI)
         getCarRepairListUseCase?.run()
