@@ -50,9 +50,10 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
     }()
 
     private let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    private let locationManager: CLLocationManager
 
     private lazy var dataProvider = CarRepairTableViewDataProvider(collectionView: collectionView, delegate: self)
-    private lazy var requestLocationUseCase = RequestLocationUseCase(presenter: self)
+    private lazy var requestLocationUseCase = RequestLocationUseCase(locationManager: locationManager, presenter: self)
 
     private var getCarRepairListUseCase: GetCarRepairListUseCase?
     private var carRepairAPI: CarRepairAPIProtocol
@@ -79,7 +80,8 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
 
     // MARK: Initializer
 
-    init(carRepairAPI: CarRepairAPIProtocol) {
+    init(locationManager: CLLocationManager, carRepairAPI: CarRepairAPIProtocol) {
+        self.locationManager = locationManager
         self.carRepairAPI = carRepairAPI
 
         super.init(nibName: nil, bundle: nil)

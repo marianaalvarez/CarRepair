@@ -11,9 +11,10 @@ import CoreLocation
 
 final class RequestLocationUseCase: Interactor {
     private unowned let presenter: CLLocationManagerDelegate & RequestLocationErrorPresenter
-    private let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager
 
-    init(presenter: CLLocationManagerDelegate & RequestLocationErrorPresenter) {
+    init(locationManager: CLLocationManager, presenter: CLLocationManagerDelegate & RequestLocationErrorPresenter) {
+        self.locationManager = locationManager
         self.presenter = presenter
     }
 
