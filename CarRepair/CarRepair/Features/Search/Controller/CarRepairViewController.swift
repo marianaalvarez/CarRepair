@@ -163,7 +163,6 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
     func showCarRepair(list: [CarRepair]) {
         dataProvider.update(carRepairList: list)
         collectionView.reloadData()
-
         removeLoading()
         collectionView.isHidden = false
         hide(views: viewsToHideOnShow)

@@ -1,6 +1,5 @@
 # .slather.yml
 
-# coverage_service: html
 xcodeproj: CarRepair.xcodeproj
 scheme: CarRepair
 configuration: Debug

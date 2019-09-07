@@ -113,16 +113,17 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         return imageView
     }()
 
-    private let websiteLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
-        label.textColor = .darkGrey
-        label.numberOfLines = 1
-        label.textAlignment = .left
-        label.adjustsFontSizeToFitWidth = true
-        label.translatesAutoresizingMaskIntoConstraints = false
+    private let websiteButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Go to website", for: .normal)
+        button.tintColor = .blue
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitleColor(.blue, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.contentHorizontalAlignment = .left
+        button.addTarget(self, action: #selector(openWebsite), for: .touchUpInside)
 
-        return label
+        return button
     }()
 
     private let viewModel: CarRepairDetailViewModel
@@ -155,9 +156,18 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         nameLabel.text = viewModel.name
         addressLabel.text = viewModel.address
         phoneNumberLabel.text = viewModel.phoneNumber
-        websiteLabel.text = viewModel.webSite
         ratingLabel.text = viewModel.rating
         openingHourLabel.text = viewModel.openNow
+    }
+
+    @objc private func openWebsite() {
+        if let link = URL(string: viewModel.webSite) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(link)
+            } else {
+                UIApplication.shared.openURL(link)
+            }
+        }
     }
 
     private func setupLayout() {
@@ -195,8 +205,8 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
         addSubview(pinIcon, constraints: [
             pinIcon.topAnchor.constraint(equalTo: openingHourLabel.bottomAnchor, constant: 24),
             pinIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            pinIcon.heightAnchor.constraint(equalToConstant: 14),
-            pinIcon.widthAnchor.constraint(equalToConstant: 14)
+            pinIcon.heightAnchor.constraint(equalToConstant: 24),
+            pinIcon.widthAnchor.constraint(equalToConstant: 24)
         ])
 
         addSubview(addressLabel, constraints: [
@@ -212,26 +222,26 @@ final class CarRepairDetailView: UIView, GetCarRepairPhotoPresenter {
 
         addSubview(phoneIcon, constraints: [
             phoneIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            phoneIcon.heightAnchor.constraint(equalToConstant: 14),
-            phoneIcon.widthAnchor.constraint(equalToConstant: 14),
+            phoneIcon.heightAnchor.constraint(equalToConstant: 24),
+            phoneIcon.widthAnchor.constraint(equalToConstant: 24),
             phoneIcon.centerYAnchor.constraint(equalTo: phoneNumberLabel.centerYAnchor)
         ])
 
         phoneNumberLabel.leadingAnchor.constraint(equalTo: phoneIcon.trailingAnchor, constant: 8).isActive = true
 
-        addSubview(websiteLabel, constraints: [
-            websiteLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 16),
-            websiteLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8)
+        addSubview(websiteButton, constraints: [
+            websiteButton.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 20),
+            websiteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 8)
         ])
 
         addSubview(webIcon, constraints: [
             webIcon.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            webIcon.heightAnchor.constraint(equalToConstant: 16),
-            webIcon.widthAnchor.constraint(equalToConstant: 16),
-            webIcon.centerYAnchor.constraint(equalTo: websiteLabel.centerYAnchor)
+            webIcon.heightAnchor.constraint(equalToConstant: 24),
+            webIcon.widthAnchor.constraint(equalToConstant: 24),
+            webIcon.centerYAnchor.constraint(equalTo: websiteButton.centerYAnchor)
         ])
 
-        websiteLabel.leadingAnchor.constraint(equalTo: webIcon.trailingAnchor, constant: 8).isActive = true
+        websiteButton.leadingAnchor.constraint(equalTo: webIcon.trailingAnchor, constant: 8).isActive = true
     }
 
     // MARK: GetCarRepairPhotoPresenter conforms
