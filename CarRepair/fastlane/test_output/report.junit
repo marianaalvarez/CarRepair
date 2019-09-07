@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='CarRepairTests.xctest' tests='19' failures='0'>
+  <testsuite name='CarRepairTests.GetCarRepairDetailUseCaseSpec' tests='8' failures='0'>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='GetCarRepairDetailUseCaseSpec__when_success__should_call_getCarRepairDetail_API_method' time='0.004'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='GetCarRepairDetailUseCaseSpec__when_success__should_pass_parameters_correctly_through_API' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='GetCarRepairDetailUseCaseSpec__when_success__should_call_show_presenter_method' time='0.000'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='GetCarRepairDetailUseCaseSpec__when_success__should_return_a_response_with_the_correct_venue_name' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='when_error__should_call_getCarRepairDetailList_API_method' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='when_error__should_pass_parameters_correctly_through_API' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='when_error__should_call_showError_presenter_method' time='0.000'/>
+    <testcase classname='CarRepairTests.GetCarRepairDetailUseCaseSpec' name='when_error__should_return_an_error_with_the_correct_message_text' time='0.000'/>
+  </testsuite>
+  <testsuite name='CarRepairTests.GetCarRepairListUseCaseSpec' tests='11' failures='0'>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_success__should_call_getCarRepairList_API_method' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_success__should_pass_parameters_correctly_through_API' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_success__should_call_showCarRepair_presenter_method' time='0.000'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_success__should_return_a_response_with_the_correct_number_of_venues' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_error__should_call_getCarRepairList_API_method' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_error__should_pass_parameters_correctly_through_API' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_error__should_call_showError_presenter_method' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_error__should_return_an_error_with_the_correct_message_text' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_empty_state__should_call_getCarRepairList_API_method' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_empty_state__should_pass_parameters_correctly_through_API' time='0.001'/>
+    <testcase classname='CarRepairTests.GetCarRepairListUseCaseSpec' name='GetCarRepairListUseCase__when_empty_state__should_call_showEmptyState_presenter_method' time='0.001'/>
+  </testsuite>
+</testsuites>

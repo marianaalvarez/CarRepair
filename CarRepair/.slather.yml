@@ -1,0 +1,10 @@
+# .slather.yml
+
+# coverage_service: html
+xcodeproj: CarRepair.xcodeproj
+scheme: CarRepair
+configuration: Debug
+workspace: CarRepair.xcworkspace
+output_directory: html
+ignore:
+    - Pods/*
