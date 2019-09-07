@@ -17,10 +17,11 @@ struct CarRepairDetailViewModel {
     let photos: [Photo]?
 
     init(carRepair: CarRepairDetail) {
-        self.name = carRepair.name
-        self.rating = "\(carRepair.rating)"
-        self.address = carRepair.address
-        self.phoneNumber = carRepair.phoneNumber
+        self.name = carRepair.name ?? ""
+        let rating = carRepair.rating ?? 0
+        self.rating = "\(rating)"
+        self.address = carRepair.address ?? "No address informed"
+        self.phoneNumber = carRepair.phoneNumber ?? "(XX) XXXXX-XXXXX"
         self.webSite = carRepair.website ?? ""
         self.isOpen = carRepair.isOpen ?? false
         self.openNow = ""

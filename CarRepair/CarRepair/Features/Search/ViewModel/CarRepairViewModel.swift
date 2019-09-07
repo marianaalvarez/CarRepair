@@ -15,9 +15,9 @@ struct CarRepairViewModel {
     let photos: [Photo]?
 
     init(carRepair: CarRepair) {
-        self.name = carRepair.name
-        self.rating = "\(carRepair.rating)"
-        self.address = carRepair.address
+        self.name = carRepair.name ?? ""
+        self.rating = "\(carRepair.rating ?? 0)"
+        self.address = carRepair.address ?? "No address informed"
         self.isOpen = carRepair.isOpen ?? false
         self.openNow = ""
         self.photos = carRepair.photos

@@ -9,10 +9,10 @@
 import Foundation
 
 struct CarRepairDetail: Codable {
-    let name: String
-    let rating: Double
-    let address: String
-    let phoneNumber: String
+    let name: String?
+    let rating: Double?
+    let address: String?
+    let phoneNumber: String?
     let isOpen: Bool?
     let website: String?
     let photos: [Photo]?
@@ -31,10 +31,10 @@ struct CarRepairDetail: Codable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: RootKeys.self)
-        name = try container.decode(String.self, forKey: .name)
-        rating = try container.decode(Double.self, forKey: .rating)
-        address = try container.decode(String.self, forKey: .address)
-        phoneNumber = try container.decode(String.self, forKey: .phoneNumber)
+        name = try? container.decode(String.self, forKey: .name)
+        rating = try? container.decode(Double.self, forKey: .rating)
+        address = try? container.decode(String.self, forKey: .address)
+        phoneNumber = try? container.decode(String.self, forKey: .phoneNumber)
         website = try? container.decode(String.self, forKey: .website)
         photos = try? container.decode([Photo].self, forKey: .photos)
         let openingHours = try? container.nestedContainer(keyedBy: OpeningHoursKeys.self, forKey: .openingHours)
