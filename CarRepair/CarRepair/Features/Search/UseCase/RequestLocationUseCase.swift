@@ -24,14 +24,11 @@ final class RequestLocationUseCase: Interactor {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
             case .authorizedAlways, .authorizedWhenInUse:
-                locationManager.delegate = presenter
                 locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager.requestLocation()
             default:
                 presenter.showLocationError()
             }
-        } else {
-            presenter.showLocationError()
-        }   
+        }
     }
 }

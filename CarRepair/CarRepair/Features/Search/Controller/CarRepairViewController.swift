@@ -119,6 +119,7 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
     private func setupDelegates() {
         errorStateView.delegate = self
         locationErrorView.delegate = self
+        locationManager.delegate = self
     }
 
     private func requestLocation() {
@@ -209,6 +210,10 @@ CLLocationManagerDelegate, RequestLocationErrorPresenter, CarRepairErrorStateVie
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         showLocationError()
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        requestLocation()
     }
 
     // MARK: PlaylistErrorStateViewDelegate conforms
